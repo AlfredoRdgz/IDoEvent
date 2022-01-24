@@ -43,16 +43,24 @@ p,div, span, li, input {
 }
 
 #header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px;
+  background-color: #F8F6F4;
+}
+
+#header * {
+  color: #5B5B5B;
+}
+
+#header.transparent, #header.transparent * {
   color: white;
   background-color: transparent;
-  z-index: 100;
-  padding: 20px;
 }
 
 #banner {
-  position: absolute;
-  top: 0;
   width: 100%;
   color: white!important;
   min-height: 800px;

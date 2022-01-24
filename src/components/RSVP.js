@@ -24,7 +24,7 @@ export function RSVP() {
         <form style={{ display: "flex", flexDirection: "column" }}>
           <p>¿Asistirás a nuestra boda?</p>
           <div className="row text-center my-2">
-            <label for="attendingYes">Si</label>
+            <label htmlFor="attendingYes">Si</label>
             <input
               id="attendingYes"
               type="radio"
@@ -32,7 +32,7 @@ export function RSVP() {
               value={true}
               onClick={() => setAttending(true)}
             />
-            <label for="attendingNo">No</label>
+            <label htmlFor="attendingNo">No</label>
             <input
               it="attendingNo"
               type="radio"
@@ -78,7 +78,7 @@ export function RSVP() {
                   checked={wantsTequila}
                   onChange={() => setWantsTequila(!wantsTequila)}
                 />
-                <label for="tequila">Tequila</label>
+                <label htmlFor="tequila">Tequila</label>
               </div>
               <div className="rsvp-checkbox-container col-12 col-md-3">
                 <input
@@ -87,7 +87,7 @@ export function RSVP() {
                   checked={wantsRum}
                   onChange={() => setWantsRum(!wantsRum)}
                 />
-                <label for="rum">Ron</label>
+                <label htmlFor="rum">Ron</label>
               </div>
               <div className="rsvp-checkbox-container col-12 col-md-3">
                 <input
@@ -96,7 +96,7 @@ export function RSVP() {
                   checked={wantsVodka}
                   onChange={() => setWantsVodka(!wantsVodka)}
                 />
-                <label for="vodka">Vodka</label>
+                <label htmlFor="vodka">Vodka</label>
               </div>
               <div className="rsvp-checkbox-container col-12 col-md-3">
                 <input
@@ -105,7 +105,7 @@ export function RSVP() {
                   checked={wantsWhiskey}
                   onChange={() => setWantsWhiskey(!wantsWhiskey)}
                 />
-                <label for="whiskey">Whiskey</label>
+                <label htmlFor="whiskey">Whiskey</label>
               </div>
             </div>
           </div>
