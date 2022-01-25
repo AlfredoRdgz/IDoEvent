@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../App.css";
 
 export function Wishlist() {
@@ -47,7 +46,7 @@ export function Wishlist() {
                     <p className="my-2">{wishlist.title}</p>
                     <p className="my-2">{wishlist.description}</p>
                     <button className="btn my-2">
-                      <Link to={wishlist.url}>VER MESA</Link>
+                      <a href={wishlist.url} rel="noreferrer" target="_blank">VER MESA</a>
                     </button>
                   </div>
                 </div>

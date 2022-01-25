@@ -48,27 +48,27 @@ export function Countdown() {
       <h2>WE ARE GETTING MARRIED</h2>
       <p>Uniremos nuestras vidas en matrimonio</p>
 
-      <div className="container">
-        <div className="row w-100">
-          <div className="col-12 col-md-3 my-4">
+      <div className="container" style={{ padding: "0" }}>
+        <div className="w-100" style={{ display: 'flex', flexDirection: 'row' }}>
+          <div className="col-3 my-4" style={{ padding: "0px 5px" }}>
             <div className="countdown-time-container">
               <h2 className="time">{days}</h2>
               <p className="time-description">DÍAS</p>
             </div>
           </div>
-          <div className="col-12 col-md-3 my-4">
+          <div className="col-3 my-4" style={{ padding: "0px 5px" }}>
             <div className="countdown-time-container">
               <h2 className="time">{hours}</h2>
               <p className="time-description">HORAS</p>
             </div>
           </div>
-          <div className="col-12 col-md-3 my-4">
+          <div className="col-3 my-4" style={{ padding: "0px 5px" }}>
             <div className="countdown-time-container">
               <h2 className="time">{minutes}</h2>
               <p className="time-description">MINUTOS</p>
             </div>
           </div>
-          <div className="col-12 col-md-3 my-4">
+          <div className="col-3 my-4" style={{ padding: "0px 5px" }}>
             <div className="countdown-time-container">
               <h2 className="time">{seconds}</h2>
               <p className="time-description">SEGUNDOS</p>

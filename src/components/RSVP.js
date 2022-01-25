@@ -15,56 +15,64 @@ export function RSVP() {
       <div className="rsvp-form-container text-center">
         <h2>CONFIRMA TU ASISTENCIA</h2>
         <p>
-          {" "}
           ¡QUEREMOS COMPARTIR ESTE MOMENTO TAN ESPERADO CONTIGO! <br /> POR
           FAVOR AYÚDANOS CONFIRMANDO TU ASISTENCIA Y SE PARTE DE NUESTRO GRAN
           DÍA.
         </p>
 
         <form style={{ display: "flex", flexDirection: "column" }}>
-          <p>¿Asistirás a nuestra boda?</p>
-          <div className="row text-center my-2">
-            <label htmlFor="attendingYes">Si</label>
-            <input
-              id="attendingYes"
-              type="radio"
-              name="attending"
-              value={true}
-              onClick={() => setAttending(true)}
-            />
-            <label htmlFor="attendingNo">No</label>
-            <input
-              it="attendingNo"
-              type="radio"
-              name="attending"
-              value={false}
-              onClick={() => setAttending(false)}
-            />
+          <p>¿Asistirás a nuestra boda? *</p>
+          <div className="text-center my-2" style={{ display: "flex" }}>
+            <div className="rsvp-input-container" style={{ margin: "auto" }}>
+              <label htmlFor="attendingYes">Si</label>
+              <input
+                id="attendingYes"
+                type="radio"
+                name="attending"
+                value={true}
+                required
+                onClick={() => setAttending(true)}
+              />
+              <label htmlFor="attendingNo">No</label>
+              <input
+                it="attendingNo"
+                type="radio"
+                name="attending"
+                value={false}
+                required
+                onClick={() => setAttending(false)}
+              />
+            </div>
           </div>
-          <div className="row text-center my-2">
-            <input
-              type="text"
-              placeholder="Nombre"
-              required
-              onChange={(event) => setName(event.target.value)}
-              value={name}
-            />
-            <input
-              type="phone"
-              placeholder="Teléfono"
-              required
-              onChange={(event) => setPhone(event.target.value)}
-              value={phone}
-            />
+          <div className="text-center my-2" style={{ display: "flex" }}>
+            <div className="rsvp-input-container" style={{ margin: "auto" }}>
+              <input
+                type="text"
+                className="rsvp-input-gray"
+                placeholder="Nombre *"
+                required
+                onChange={(event) => setName(event.target.value)}
+                value={name}
+              />
+              <input
+                type="phone"
+                className="rsvp-input-gray"
+                placeholder="Teléfono *"
+                required
+                onChange={(event) => setPhone(event.target.value)}
+                value={phone}
+              />
+            </div>
           </div>
           <div className="text-center my-2">
-            <p>¿Cuántos invitados asistirán a la boda?</p>
+            <p>¿Cuántos invitados asistirán a la boda? *</p>
             <input
-            className="w-100"
+              className="rsvp-input-invisible w-100"
               type="number"
-              placeholder="La cantidad de invitados se muestra en la invitación previamente enviada"
+              placeholder="Referencia mostrada en la invitación previamente enviada"
               value={attendees}
               required
+              min={0}
               onChange={(event) => setAttendees(event.target.value)}
             />
           </div>
@@ -109,7 +117,7 @@ export function RSVP() {
               </div>
             </div>
           </div>
-          <button className="btn">ENVIAR CONFIRMACIÓN</button>
+          <button className="btn btn-gray">ENVIAR CONFIRMACIÓN</button>
         </form>
         <p className="mt-4">
           NO OLVIDES USAR EL HASHTAG #DANIELYCRISTI
