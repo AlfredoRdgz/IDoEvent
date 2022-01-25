@@ -14,7 +14,7 @@ export function EventDescription({ event }) {
         <p className="display-mobile">{eventTitle}</p>
         <p>{eventLocationName}</p>
         <p>{eventAddress}</p>
-        <b>{eventTime}</b>
+        <b className="cochin">{eventTime}</b>
       </div>
       <button className="btn">
         <a href={mapUrl} rel="noreferrer" target="_blank">VER MAPA</a>

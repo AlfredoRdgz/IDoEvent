@@ -28,6 +28,10 @@
   src: url("./styles/monoandfriendsla-Regular.otf");
 }
 
+.cochin {
+  font-family: Cochin !important;
+}
+
 h1 {
   font-family: ENRIQ !important;
 }
@@ -37,6 +41,7 @@ h3,
 h4,
 h5 {
   font-family: Cochin !important;
+  font-weight:bold !important;
   color: #B5B090;
 }
 
@@ -204,7 +209,7 @@ input {
   }
 
   .event-icon {
-    left: 10px!important;
+    left: 10px !important;
   }
 }
 
