@@ -32,11 +32,11 @@ export function DressCode() {
             />
             <h2>DRESS CODE</h2>
             <p>{dressCodeDescription}</p>
-            <b>MUJERES:</b>
+            <b className="cochin">MUJERES:</b>
             <p>{dressCodeWomen}</p>
-            <b>HOMBRES:</b>
+            <b className="cochin">HOMBRES:</b>
             <p>{dressCodeMen}</p>
-            {childrenAllowed ? "" : <b>NO NIÑOS</b>}
+            {childrenAllowed ? "" : <b className="cochin">NO NIÑOS</b>}
             <div className="row">
               <div className="col-3">
                 <img

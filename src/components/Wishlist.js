@@ -2,8 +2,7 @@ import React from "react";
 import "../App.css";
 
 export function Wishlist() {
-  const whishlistDescription =
-    "SU PRESENCIA ES NUESTRO MEJOR REGALO. SI DESEAS DARNOS UN OBSEQUIO LES COMPARTIMOS NUESTRA MESA DE REGALOS.";
+
   const wishlistArray = [
     {
       image: "http://danielycristi.com/images/web-boda-DanielyCristi-20.png",
@@ -26,10 +25,10 @@ export function Wishlist() {
         <h2>MESA DE REGALOS</h2>
         <img
           alt="Dress code"
-          style={{ width: "75px" }}
+          style={{ width: "75px", marginBottom: "20px" }}
           src="http://danielycristi.com/images/web-boda-DanielyCristi-19.png"
         />
-        <p>{whishlistDescription}</p>
+        <p>SU PRESENCIA ES NUESTRO MEJOR REGALO.<br /> SI DESEAS DARNOS UN OBSEQUIO LES COMPARTIMOS NUESTRA MESA DE REGALOS.</p>
         <div className="row">
           {wishlistArray.map((wishlist) => {
             const className = "my-4 col-12 col-md-" + 12 / wishlistArray.length;

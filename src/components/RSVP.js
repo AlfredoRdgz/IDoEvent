@@ -14,7 +14,7 @@ export function RSVP() {
     <div id="rsvp" className="container">
       <div className="rsvp-form-container text-center">
         <h2>CONFIRMA TU ASISTENCIA</h2>
-        <p>
+        <p style={{ margin: "20px", fontSize: "12px" }}>
           ¡QUEREMOS COMPARTIR ESTE MOMENTO TAN ESPERADO CONTIGO! <br /> POR
           FAVOR AYÚDANOS CONFIRMANDO TU ASISTENCIA Y SE PARTE DE NUESTRO GRAN
           DÍA.
@@ -78,8 +78,8 @@ export function RSVP() {
           </div>
           <div className="text-center my-2">
             <p>¿Qué te gustaría tomar?</p>
-            <div className="row text-center my-2">
-              <div className="rsvp-checkbox-container col-12 col-md-3">
+            <div className="text-center my-2" style={{ display: "flex", justifyContent: "center"}}>
+              <div className="rsvp-checkbox-container">
                 <input
                   id="tequila"
                   type="checkbox"
@@ -88,7 +88,7 @@ export function RSVP() {
                 />
                 <label htmlFor="tequila">Tequila</label>
               </div>
-              <div className="rsvp-checkbox-container col-12 col-md-3">
+              <div className="rsvp-checkbox-container">
                 <input
                   id="rum"
                   type="checkbox"
@@ -97,7 +97,7 @@ export function RSVP() {
                 />
                 <label htmlFor="rum">Ron</label>
               </div>
-              <div className="rsvp-checkbox-container col-12 col-md-3">
+              <div className="rsvp-checkbox-container">
                 <input
                   id="vodka"
                   type="checkbox"
@@ -106,7 +106,7 @@ export function RSVP() {
                 />
                 <label htmlFor="vodka">Vodka</label>
               </div>
-              <div className="rsvp-checkbox-container col-12 col-md-3">
+              <div className="rsvp-checkbox-container">
                 <input
                   id="whiskey"
                   type="checkbox"
@@ -119,7 +119,7 @@ export function RSVP() {
           </div>
           <button className="btn btn-gray">ENVIAR CONFIRMACIÓN</button>
         </form>
-        <p className="mt-4">
+        <p style={{ margin: "20px", fontSize: "12px" }}>
           NO OLVIDES USAR EL HASHTAG #DANIELYCRISTI
           #DANIELUGIVEHERALIFEFULLOFADVENTURES
         </p>

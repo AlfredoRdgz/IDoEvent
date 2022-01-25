@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../App.css";
 
 export function Countdown() {
-  const date = new Date(2022, 11, 26);
+  const date = new Date('2022-11-26T00:00:00').getTime();
 
   // Get today's date and time
   var now = new Date().getTime();
@@ -46,32 +46,40 @@ export function Countdown() {
         style={{ width: "50px" }}
       />
       <h2>WE ARE GETTING MARRIED</h2>
-      <p>Uniremos nuestras vidas en matrimonio</p>
+      <p>UNIREMOS NUESTRAS VIDAS EN MATRIMONIO</p>
 
-      <div className="container" style={{ padding: "0" }}>
+      <div className="container w-100" style={{ padding: "0" }}>
         <div className="w-100" style={{ display: 'flex', flexDirection: 'row' }}>
           <div className="col-3 my-4" style={{ padding: "0px 5px" }}>
             <div className="countdown-time-container">
-              <h2 className="time">{days}</h2>
-              <p className="time-description">DÍAS</p>
+              <div style={{ margin: "auto" }}>
+                <h2 className="time">{days}</h2>
+                <p className="time-description">DÍAS</p>
+              </div>
             </div>
           </div>
           <div className="col-3 my-4" style={{ padding: "0px 5px" }}>
             <div className="countdown-time-container">
-              <h2 className="time">{hours}</h2>
-              <p className="time-description">HORAS</p>
+              <div style={{ margin: "auto" }}>
+                <h2 className="time">{hours}</h2>
+                <p className="time-description">HORAS</p>
+              </div>
             </div>
           </div>
           <div className="col-3 my-4" style={{ padding: "0px 5px" }}>
             <div className="countdown-time-container">
-              <h2 className="time">{minutes}</h2>
-              <p className="time-description">MINUTOS</p>
+              <div style={{ margin: "auto" }}>
+                <h2 className="time">{minutes}</h2>
+                <p className="time-description">MINUTOS</p>
+              </div>
             </div>
           </div>
           <div className="col-3 my-4" style={{ padding: "0px 5px" }}>
             <div className="countdown-time-container">
-              <h2 className="time">{seconds}</h2>
-              <p className="time-description">SEGUNDOS</p>
+              <div style={{ margin: "auto" }}>
+                <h2 className="time">{seconds}</h2>
+                <p className="time-description">SEGUNDOS</p>
+              </div>
             </div>
           </div>
         </div>
