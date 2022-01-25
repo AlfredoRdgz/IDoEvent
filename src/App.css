@@ -28,10 +28,6 @@
   src: url("./styles/monoandfriendsla-Regular.otf");
 }
 
-.cochin {
-  font-family: Cochin !important;
-}
-
 h1 {
   font-family: ENRIQ !important;
 }
@@ -60,6 +56,10 @@ input {
 
 .time {
   font-family: Gotham Bold !important;
+}
+
+.cochin {
+  font-family: Cochin !important;
 }
 
 #header {
