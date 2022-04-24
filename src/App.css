@@ -62,16 +62,25 @@ input {
   font-family: Cochin !important;
 }
 
-#header {
+#header, #headerMobile {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  padding: 20px;
   background-color: #F8F6F4;
 }
 
-#header * {
+#headerMobile {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  padding: 20px;
+}
+
+#header *, #headerMobile * {
   color: #5B5B5B;
 }
 
@@ -79,6 +88,58 @@ input {
 #header.transparent * {
   color: white;
   background-color: transparent;
+}
+
+.menu-btn {
+  border: none;
+}
+
+.icon-bar {
+  background-color: #888;
+  margin: 4px 0;
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.navbar-header {
+  padding: 5px 10px;
+  display: flex;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #F8F6F4;
+}
+
+.navbar.show {
+  display: block;
+  width: 100%;
+  background-color: #F8F6F4;
+  color: #5B5B5B;
+}
+
+.navbar.show a {
+  padding: 10px;
+  width: 100%;
+}
+
+.navbar a:hover {
+  color: #F8F6F4!important;
+  background-color: #5B5B5B;
+}
+
+@media screen and (max-width: 1024px) {
+  #header {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #headerMobile {
+    display: none;
+  }
 }
 
 #banner {
@@ -178,7 +239,7 @@ input {
   position: absolute;
   width: 6px;
   background-color: #B5B090;
-  top: 0;
+  top: 5px;
   bottom: 0;
   left: 50%;
   margin-left: -3px;
@@ -204,9 +265,9 @@ input {
   }
 
   .timeline::after {
-    top: 0;
+    top: 5px;
     bottom: 0;
-    left: 30px;
+    left: 40px;
   }
 
   .event-left::before {

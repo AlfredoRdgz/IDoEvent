@@ -10,6 +10,11 @@ export function RSVP() {
   const [wantsVodka, setWantsVodka] = useState(false);
   const [wantsWhiskey, setWantsWhiskey] = useState(false);
 
+
+  function sendForm() {
+    
+  }
+
   return (
     <div id="rsvp" className="container">
       <div className="rsvp-form-container text-center">
@@ -20,7 +25,7 @@ export function RSVP() {
           DÍA.
         </p>
 
-        <form style={{ display: "flex", flexDirection: "column" }}>
+        <form style={{ display: "flex", flexDirection: "column" }} onSubmit={sendForm}>
           <p>¿Asistirás a nuestra boda? *</p>
           <div className="text-center my-2" style={{ display: "flex" }}>
             <div className="rsvp-input-container" style={{ margin: "auto" }}>

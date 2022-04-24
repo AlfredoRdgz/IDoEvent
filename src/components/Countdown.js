@@ -49,8 +49,8 @@ export function Countdown() {
       <p>UNIREMOS NUESTRAS VIDAS EN MATRIMONIO</p>
 
       <div className="container w-100" style={{ padding: "0" }}>
-        <div className="w-100" style={{ display: 'flex', flexDirection: 'row' }}>
-          <div className="col-3 my-4" style={{ padding: "0px 5px" }}>
+        <div className="row m-0 p-0">
+          <div className="col-6 col-md-3 my-4" style={{ padding: "0px 5px" }}>
             <div className="countdown-time-container">
               <div style={{ margin: "auto" }}>
                 <h2 className="time">{days}</h2>
@@ -58,7 +58,7 @@ export function Countdown() {
               </div>
             </div>
           </div>
-          <div className="col-3 my-4" style={{ padding: "0px 5px" }}>
+          <div className="col-6 col-md-3 my-4" style={{ padding: "0px 5px" }}>
             <div className="countdown-time-container">
               <div style={{ margin: "auto" }}>
                 <h2 className="time">{hours}</h2>
@@ -66,7 +66,7 @@ export function Countdown() {
               </div>
             </div>
           </div>
-          <div className="col-3 my-4" style={{ padding: "0px 5px" }}>
+          <div className="col-6 col-md-3 my-4" style={{ padding: "0px 5px" }}>
             <div className="countdown-time-container">
               <div style={{ margin: "auto" }}>
                 <h2 className="time">{minutes}</h2>
@@ -74,7 +74,7 @@ export function Countdown() {
               </div>
             </div>
           </div>
-          <div className="col-3 my-4" style={{ padding: "0px 5px" }}>
+          <div className="col-6 col-md-3 my-4" style={{ padding: "0px 5px" }}>
             <div className="countdown-time-container">
               <div style={{ margin: "auto" }}>
                 <h2 className="time">{seconds}</h2>

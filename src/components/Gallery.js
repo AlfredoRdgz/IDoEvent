@@ -52,7 +52,7 @@ export function Gallery() {
         </div>
       </div>
       <h2 className="cursive text-center">Daniel & Cristi</h2>
-      <p className="text-center mb-4">2022 | DANIEL Y CRISTI | Made by IDoEvent</p>
+      <p className="text-center mb-4">2022 | DANIEL Y CRISTI | Made by PuntoDoce.mx</p>
     </div>
   );
 }
