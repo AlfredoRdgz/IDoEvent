@@ -15,7 +15,7 @@ export function Wishlist() {
       title: "Daniel y Cristi",
       description:
         "Da clic en el botón de ver mesa y luego ingresa el CP 60201, Evanston para verificar disponibilidad de productos",
-      url: "https://www.amazon.com.mx/wedding/shrare/danielycristi",
+      url: "https://www.amazon.com.mx/wedding/share/danielycristi",
     },
   ];
 
