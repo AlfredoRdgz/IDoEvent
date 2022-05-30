@@ -1,18 +1,166 @@
-import React, { useState } from "react";
+import React from "react";
 
 export function RSVP() {
-  const [attending, setAttending] = useState(true);
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [attendees, setAttendees] = useState("");
-  const [wantsTequila, setWantsTequila] = useState(false);
-  const [wantsRum, setWantsRum] = useState(false);
-  const [wantsVodka, setWantsVodka] = useState(false);
-  const [wantsWhiskey, setWantsWhiskey] = useState(false);
+  const rsvpQuestions = [
+    {
+      name: "attending",
+      title: "¿Asistirás a nuestra boda? *",
+      type: "yesNoQuestion",
+      value: "Si"
+    },
+    {
+      name: "name",
+      placeholder: "Nombre *",
+      type: "text"
+    },
+    {
+      name: "phone",
+      placeholder: "Teléfono *",
+      type: "text"
+    },
+    {
+      name: "guestCount",
+      title: "¿Cuántos invitados asistirán a la boda? *",
+      type: "selectCount",
+      placeholder: "Referencia mostrada en la invitación previamente enviada",
+      min: 0,
+      max: 6
+    },
+    {
+      name: "guestNames",
+      title: "Nombre(s) de invitado(s) *",
+      type: "textarea",
+      placeholder: "Ingrese el nombre completo de todos los invitados que asistirán",
+    },
+    {
+      name: "drinks",
+      title: "¿Qué les gustaría tomar?",
+      type: "option",
+      options: [{ value: "Tequila", isChecked: false }, { value: "Ron", isChecked: false }, { value: "Vodka", isChecked: false }, { value: "Whiskey", isChecked: false }]
+    }
+  ];
+
+  function createYesNoQuestion(inputData) {
+
+    var yesInputId = inputData.title + "Yes";
+    var noInputId = inputData.title + "No";
+
+    return (
+      <div className="container w-100 my-2">
+        <p>{inputData.title}</p>
+        <div className="text-center" style={{ display: "flex" }}>
+          <div className="rsvp-input-container" style={{ margin: "auto" }}>
+            <label htmlFor={yesInputId}>Si</label>
+            <input
+              id={yesInputId}
+              type="radio"
+              name={inputData.name}
+              value={inputData.value === "Si"}
+              required
+              onClick={() => inputData.value = "Si"}
+            />
+            <label htmlFor={noInputId}>No</label>
+            <input
+              id={noInputId}
+              type="radio"
+              name={inputData.name}
+              value={inputData.value === "No"}
+              required
+              onClick={() => inputData.value = "No"}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  function createShortInput(inputData) {
+    return (
+      <div className="container w-50 my-2">
+        <input
+          name={inputData.name}
+          type={inputData.type}
+          className="rsvp-input-gray w-100"
+          placeholder={inputData.placeholder}
+          required
+          onChange={(event) => inputData.value = event.target.value}
+          value={inputData.value}
+        />
+      </div>
+    );
+  }
+
+  function createTextArea(inputData) {
+    return (
+      <div className="container w-100 my-2">
+        <p>{inputData.title}</p>
+        <textarea
+          name={inputData.name}
+          type={inputData.type}
+          rows={2}
+          className="rsvp-input-gray w-100"
+          placeholder={inputData.placeholder}
+          required
+          onChange={(event) => inputData.value = event.target.value}
+          value={inputData.value}
+        />
+      </div>
+    );
+  }
+
+  function createSelectCount(inputData) {
+
+    var range = [];
+
+    for (var i = inputData.min; i < inputData.max; i++) {
+      range.push(i);
+    }
+
+    return (
+      <div className="container w-100 my-2">
+        <p>{inputData.title}</p>
+        <select
+          name={inputData.name}
+          className="rsvp-input-gray w-100"
+          placeholder={inputData.placeholder}
+          required
+          onChange={(event) => inputData.value = event.target.value}
+          value={inputData.value}>
+          <option value="" selected disabled>{inputData.placeholder}</option>
+          {range.map((number) => <option value={number} key={number}>{number}</option>)}
+        </select>
+      </div>
+    );
+  }
+
+  function createOptionList(inputData) {
+    return (
+      <div className="container my-2">
+        <p>{inputData.title}</p>
+        <div className="text-center" style={{ display: "flex" }}>
+          <div className="row" style={{ margin: "auto" }}>
+            {inputData.options.map((option) =>
+              <div key={option.value} className="p-2">
+                <label htmlFor={option.value + "Option"} className="p-2">{option.value}</label>
+                <input
+                  className="p-2"
+                  id={option.value + "Option"}
+                  type="checkbox"
+                  name={option.value}
+                  value={option.isChecked}
+                  onClick={() => option.isChecked = !option.isChecked}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
 
   function sendForm() {
-    
+
   }
 
   return (
@@ -26,104 +174,31 @@ export function RSVP() {
         </p>
 
         <form style={{ display: "flex", flexDirection: "column" }} onSubmit={sendForm}>
-          <p>¿Asistirás a nuestra boda? *</p>
-          <div className="text-center my-2" style={{ display: "flex" }}>
-            <div className="rsvp-input-container" style={{ margin: "auto" }}>
-              <label htmlFor="attendingYes">Si</label>
-              <input
-                id="attendingYes"
-                type="radio"
-                name="attending"
-                value={true}
-                required
-                onClick={() => setAttending(true)}
-              />
-              <label htmlFor="attendingNo">No</label>
-              <input
-                it="attendingNo"
-                type="radio"
-                name="attending"
-                value={false}
-                required
-                onClick={() => setAttending(false)}
-              />
-            </div>
-          </div>
-          <div className="text-center my-2" style={{ display: "flex" }}>
-            <div className="rsvp-input-container" style={{ margin: "auto" }}>
-              <input
-                type="text"
-                className="rsvp-input-gray"
-                placeholder="Nombre *"
-                required
-                onChange={(event) => setName(event.target.value)}
-                value={name}
-              />
-              <input
-                type="phone"
-                className="rsvp-input-gray"
-                placeholder="Teléfono *"
-                required
-                onChange={(event) => setPhone(event.target.value)}
-                value={phone}
-              />
-            </div>
-          </div>
-          <div className="text-center my-2">
-            <p>¿Cuántos invitados asistirán a la boda? *</p>
-            <input
-              className="rsvp-input-invisible w-100"
-              type="number"
-              placeholder="Referencia mostrada en la invitación previamente enviada"
-              value={attendees}
-              required
-              min={0}
-              onChange={(event) => setAttendees(event.target.value)}
-            />
-          </div>
-          <div className="text-center my-2">
-            <p>¿Qué te gustaría tomar?</p>
-            <div className="text-center my-2" style={{ display: "flex", justifyContent: "center"}}>
-              <div className="rsvp-checkbox-container">
-                <input
-                  id="tequila"
-                  type="checkbox"
-                  checked={wantsTequila}
-                  onChange={() => setWantsTequila(!wantsTequila)}
-                />
-                <label htmlFor="tequila">Tequila</label>
-              </div>
-              <div className="rsvp-checkbox-container">
-                <input
-                  id="rum"
-                  type="checkbox"
-                  checked={wantsRum}
-                  onChange={() => setWantsRum(!wantsRum)}
-                />
-                <label htmlFor="rum">Ron</label>
-              </div>
-              <div className="rsvp-checkbox-container">
-                <input
-                  id="vodka"
-                  type="checkbox"
-                  checked={wantsVodka}
-                  onChange={() => setWantsVodka(!wantsVodka)}
-                />
-                <label htmlFor="vodka">Vodka</label>
-              </div>
-              <div className="rsvp-checkbox-container">
-                <input
-                  id="whiskey"
-                  type="checkbox"
-                  checked={wantsWhiskey}
-                  onChange={() => setWantsWhiskey(!wantsWhiskey)}
-                />
-                <label htmlFor="whiskey">Whiskey</label>
-              </div>
-            </div>
+
+          <div className="row">
+            {
+              rsvpQuestions.map((question) => {
+                switch (question.type) {
+                  case "text":
+                  case "phone":
+                    return createShortInput(question);
+                  case "yesNoQuestion":
+                    return createYesNoQuestion(question);
+                  case "textarea":
+                    return createTextArea(question);
+                  case "selectCount":
+                    return createSelectCount(question);
+                  case "option":
+                    return createOptionList(question);
+                  default:
+                    return null;
+                }
+              })
+            }
           </div>
           <button className="btn btn-gray">ENVIAR CONFIRMACIÓN</button>
         </form>
+
         <p style={{ margin: "20px", fontSize: "12px" }}>
           NO OLVIDES USAR EL HASHTAG #DANIELYCRISTI
           #DANIELUGIVEHERALIFEFULLOFADVENTURES

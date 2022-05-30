@@ -8,14 +8,14 @@ export function Wishlist() {
       image: "http://danielycristi.com/images/web-boda-DanielyCristi-20.png",
       title: "Daniel Romo y Ana Cristina González Carballo",
       description: "Número de evento: 50481006",
-      url: "",
+      url: "https://mesaderegalos.liverpool.com.mx/milistaderegalos/50819677",
     },
     {
       image: "http://danielycristi.com/images/web-boda-DanielyCristi-21.png",
       title: "Daniel y Cristi",
       description:
         "Da clic en el botón de ver mesa y luego ingresa el CP 60201, Evanston para verificar disponibilidad de productos",
-      url: "",
+      url: "https://www.amazon.com.mx/wedding/shrare/danielycristi",
     },
   ];
 
@@ -53,6 +53,7 @@ export function Wishlist() {
             );
           })}
         </div>
+        <p>Agradecemos que nos notifiquen si nos hacen llegar un regalo de Liverpool. Como sabrán, en ocasiones no entregan completo lo que ustedes con mucho cariño nos hicieron favor de regalarnos y nos gustaría agradecerles personalmente.</p>
       </div>
     </div>
   );
