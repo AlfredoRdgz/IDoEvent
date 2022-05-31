@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Email from "../smtp";
+
+const dotenv = require('dotenv');
 
 export function RSVP() {
 
@@ -167,7 +170,10 @@ export function RSVP() {
     event.preventDefault();
     setIsRequestPending(true);
 
-    var userAnswers = [];
+    var htmlString = `
+    <p>¡Uno de sus invitados a respondido a su invitación!</p>
+<p>Le enviamos este correo para informarle que ha recibido una nueva respuesta de nuestro servicio de RSVP:<br/><br/>`;
+
     for (var i = 0; i < rsvpQuestions.length; i++) {
       var options = rsvpQuestions[i].options ? rsvpQuestions[i].options.filter((option) => option.isChecked) : null;
 
@@ -175,23 +181,24 @@ export function RSVP() {
         title: rsvpQuestions[i].title || rsvpQuestions[i].placeholder,
         value: options || rsvpQuestions[i].value
       }
-      userAnswers.push(answerObject);
+
+      htmlString += `<p><b>${answerObject.title}</b>: ${answerObject.value}</p></br>`;
     }
 
-    var requestContract = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
-      body: JSON.stringify({ answers: userAnswers, wedsEmail: "alfredordgz98@gmail.com" })
-    }
-    const response = await fetch(`https://danielycristi.com/react-php/rest/api.php?tp=rsvp`, requestContract);
+    htmlString += '<p><b>Atentamente:</b><br/>IDoEvent | Punto Doce</p>';
 
-    if (response.status === 200) {
+    Email.send({
+      Host: process.env.EMAIL_HOST,
+      Username: process.env.EMAIL_USER,
+      Password: process.env.EMAIL_PWD,
+      To: process.env.EMAIL_DESTINATION,
+      From: process.env.EMAIL_USER,
+      Subject: "Nueva respuesta en formulario de boda",
+      Body: htmlString
+    }).then(() => {
       setFormSent(true);
-    } else {
-      // TODO: handle error
-    }
-
-    setIsRequestPending(false);
+      setIsRequestPending(false);
+    });
   }
 
   return (
