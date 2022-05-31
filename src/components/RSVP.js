@@ -167,10 +167,7 @@ export function RSVP() {
     event.preventDefault();
     setIsRequestPending(true);
 
-    var htmlString = `
-    <p>¡Uno de sus invitados a respondido a su invitación!</p>
-<p>Le enviamos este correo para informarle que ha recibido una nueva respuesta de nuestro servicio de RSVP:<br/><br/>`;
-
+    var userAnswers = [];
     for (var i = 0; i < rsvpQuestions.length; i++) {
       var options = rsvpQuestions[i].options ? rsvpQuestions[i].options.filter((option) => option.isChecked).map((filteredOption) => filteredOption.value) : null;
 
@@ -178,24 +175,23 @@ export function RSVP() {
         title: rsvpQuestions[i].title || rsvpQuestions[i].placeholder,
         value: JSON.stringify(options) || rsvpQuestions[i].value
       }
-
-      htmlString += `<p><b>${answerObject.title}</b>: ${answerObject.value}</p></br>`;
+      userAnswers.push(answerObject);
     }
 
-    htmlString += '<p><b>Atentamente:</b><br/>IDoEvent | Punto Doce</p>';
+    var requestContract = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+      body: JSON.stringify({ answers: userAnswers, wedsEmail: "alfredordgz98@gmail.com" })
+    }
+    const response = await fetch(`https://danielycristi.com/react-php/rest/api.php?tp=rsvp`, requestContract);
 
-    window.Email.send({
-      Host: "smtp.titan.email",
-      Username: "info@danielycristi.com",
-      Password: "Dancris26!",
-      To: "rsvp@danielycristi.com",
-      From: "info@danielycristi.com",
-      Subject: "Nueva respuesta en formulario de boda",
-      Html: htmlString
-    }).then(() => {
+    if (response.status === 200) {
       setFormSent(true);
-      setIsRequestPending(false);
-    });
+    } else {
+      // TODO: handle error
+    }
+
+    setIsRequestPending(false);
   }
 
   return (
