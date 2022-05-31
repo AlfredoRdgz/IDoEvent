@@ -172,11 +172,11 @@ export function RSVP() {
 <p>Le enviamos este correo para informarle que ha recibido una nueva respuesta de nuestro servicio de RSVP:<br/><br/>`;
 
     for (var i = 0; i < rsvpQuestions.length; i++) {
-      var options = rsvpQuestions[i].options ? rsvpQuestions[i].options.filter((option) => option.isChecked) : null;
+      var options = rsvpQuestions[i].options ? rsvpQuestions[i].options.filter((option) => option.isChecked).map((filteredOption) => filteredOption.value) : null;
 
       var answerObject = {
         title: rsvpQuestions[i].title || rsvpQuestions[i].placeholder,
-        value: options || rsvpQuestions[i].value
+        value: JSON.stringify(options) || rsvpQuestions[i].value
       }
 
       htmlString += `<p><b>${answerObject.title}</b>: ${answerObject.value}</p></br>`;
@@ -185,11 +185,11 @@ export function RSVP() {
     htmlString += '<p><b>Atentamente:</b><br/>IDoEvent | Punto Doce</p>';
 
     window.Email.send({
-      Host: process.env.EMAIL_HOST,
-      Username: process.env.EMAIL_USER,
-      Password: process.env.EMAIL_PWD,
-      To: process.env.EMAIL_DESTINATION,
-      From: process.env.EMAIL_USER,
+      Host: "smtp.titan.email",
+      Username: "info@danielycristi.com",
+      Password: "Dancris26!",
+      To: "rsvp@danielycristi.com",
+      From: "info@danielycristi.com",
       Subject: "Nueva respuesta en formulario de boda",
       Html: htmlString
     }).then(() => {
