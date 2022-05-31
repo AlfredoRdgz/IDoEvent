@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Email from "../smtp";
 
-const dotenv = require('dotenv');
-
 export function RSVP() {
 
   const [isRequestPending, setIsRequestPending] = useState(false);
