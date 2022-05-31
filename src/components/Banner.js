@@ -10,7 +10,7 @@ export function Banner({ bannerImage }) {
       id="banner"
       style={{
         backgroundImage:
-          "url('http://danielycristi.com/images/web-boda-Danielycristi-03_opt.jpg')",
+          "url('https://danielycristi.com/images/web-boda-Danielycristi-03_opt.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center center",
       }}

@@ -5,13 +5,13 @@ export function Wishlist() {
 
   const wishlistArray = [
     {
-      image: "http://danielycristi.com/images/web-boda-DanielyCristi-20.png",
+      image: "https://danielycristi.com/images/web-boda-DanielyCristi-20.png",
       title: "Daniel Romo y Ana Cristina González Carballo",
       description: "Número de evento: 50481006",
       url: "https://mesaderegalos.liverpool.com.mx/milistaderegalos/50819677",
     },
     {
-      image: "http://danielycristi.com/images/web-boda-DanielyCristi-21.png",
+      image: "https://danielycristi.com/images/web-boda-DanielyCristi-21.png",
       title: "Daniel y Cristi",
       description:
         "Da clic en el botón de ver mesa y luego ingresa el CP 60201, Evanston para verificar disponibilidad de productos",
@@ -26,7 +26,7 @@ export function Wishlist() {
         <img
           alt="Dress code"
           style={{ width: "75px", marginBottom: "20px" }}
-          src="http://danielycristi.com/images/web-boda-DanielyCristi-19.png"
+          src="https://danielycristi.com/images/web-boda-DanielyCristi-19.png"
         />
         <p>SU PRESENCIA ES NUESTRO MEJOR REGALO.<br /> SI DESEAS DARNOS UN OBSEQUIO LES COMPARTIMOS NUESTRA MESA DE REGALOS.</p>
         <div className="row">

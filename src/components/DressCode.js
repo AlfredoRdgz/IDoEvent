@@ -4,18 +4,18 @@ import "../App.css";
 export function DressCode() {
   const dressCodeDescription = "RIGUROSO ETIQUETA";
   const dressCodeImg =
-    "http://danielycristi.com/images/web-boda-Danielycristi-08_opt.jpg";
+    "https://danielycristi.com/images/web-boda-Danielycristi-08_opt.jpg";
   const dressCodeWomen = "Vestido largo liso, NO blanco";
   const dressCodeMen = "Traje completo y corbata, negro, azul o gris";
   const childrenAllowed = false;
   const dressCodeImg1 =
-    "http://danielycristi.com/images/web-boda-Danielycristi-09.png";
+    "https://danielycristi.com/images/web-boda-Danielycristi-09.png";
   const dressCodeImg2 =
-    "http://danielycristi.com/images/web-boda-Danielycristi-10.png";
+    "https://danielycristi.com/images/web-boda-Danielycristi-10.png";
   const dressCodeImg3 =
-    "http://danielycristi.com/images/web-boda-Danielycristi-11.png";
+    "https://danielycristi.com/images/web-boda-Danielycristi-11.png";
   const dressCodeImg4 =
-    "http://danielycristi.com/images/web-boda-Danielycristi-12.png";
+    "https://danielycristi.com/images/web-boda-Danielycristi-12.png";
 
   return (
     <div id="dressCode" className="container">
@@ -28,7 +28,7 @@ export function DressCode() {
             <img
               alt="Dress code"
               style={{ width: "75px" }}
-              src="http://danielycristi.com/images/web-boda-DanielyCristi-18.png"
+              src="https://danielycristi.com/images/web-boda-DanielyCristi-18.png"
             />
             <h2>DRESS CODE</h2>
             <p>{dressCodeDescription}</p>

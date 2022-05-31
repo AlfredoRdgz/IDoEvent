@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 export function RSVP() {
 
+  const [isRequestPending, setIsRequestPending] = useState(false);
   const [formSent, setFormSent] = useState(false);
 
   const rsvpQuestions = [
@@ -164,6 +165,7 @@ export function RSVP() {
 
   async function sendForm(event) {
     event.preventDefault();
+    setIsRequestPending(true);
 
     var userAnswers = [];
     for (var i = 0; i < rsvpQuestions.length; i++) {
@@ -182,13 +184,14 @@ export function RSVP() {
       body: JSON.stringify({ answers: userAnswers, wedsEmail: "alfredordgz98@gmail.com" })
     }
     const response = await fetch(`https://danielycristi.com/react-php/rest/api.php?tp=rsvp`, requestContract);
-    console.log(response);
 
     if (response.status === 200) {
       setFormSent(true);
     } else {
       // TODO: handle error
     }
+
+    setIsRequestPending(false);
   }
 
   return (
@@ -224,7 +227,7 @@ export function RSVP() {
               })
             }
           </div>
-          <button className="btn btn-gray">ENVIAR CONFIRMACIÓN</button>
+          <button className="btn btn-gray" disabled={isRequestPending}>ENVIAR CONFIRMACIÓN</button>
         </form>
 
         <p style={{ margin: "20px", fontSize: "12px" }}>

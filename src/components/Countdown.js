@@ -42,7 +42,7 @@ export function Countdown() {
     <div id="countdown">
       <img
         alt="DanielYCristi"
-        src="http://danielycristi.com/images/web-boda-DanielyCristi-14.png"
+        src="https://danielycristi.com/images/web-boda-DanielyCristi-14.png"
         style={{ width: "50px" }}
       />
       <h2>WE ARE GETTING MARRIED</h2>

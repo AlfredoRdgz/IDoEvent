@@ -10,9 +10,9 @@ import { Gallery } from "../../components/Gallery";
 
 export function DanielCristi() {
   const bannerImage =
-    "http://danielycristi.com/images/web-boda-DanielyCristi-13.png";
+    "https://danielycristi.com/images/web-boda-DanielyCristi-13.png";
   const backgroundImage1 =
-    "url('http://danielycristi.com/images/web-boda-Danielycristi-04_opt.jpg')";
+    "url('https://danielycristi.com/images/web-boda-Danielycristi-04_opt.jpg')";
 
   return (
     <div id="template">

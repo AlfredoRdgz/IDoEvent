@@ -26,7 +26,7 @@ export function Header() {
             <img
               className="header-logo"
               alt="DanielYCristi"
-              src="http://danielycristi.com/images/web-boda-DanielyCristi-13.png"
+              src="https://danielycristi.com/images/web-boda-DanielyCristi-13.png"
             />
           </a>
         </div>
@@ -48,7 +48,7 @@ export function Header() {
             <img
               className="header-logo"
               alt="DanielYCristi"
-              src="http://danielycristi.com/images/web-boda-DanielyCristi-13.png"
+              src="https://danielycristi.com/images/web-boda-DanielyCristi-13.png"
             />
           </a>
           <div className="menu row">

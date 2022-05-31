@@ -6,9 +6,9 @@ export function Itinerary({ bannerImage }) {
   const events = [
     {
       title: "CEREMONIA",
-      icon: "http://danielycristi.com/images/web-boda-DanielyCristi-15.png",
+      icon: "https://danielycristi.com/images/web-boda-DanielyCristi-15.png",
       image:
-        "http://danielycristi.com/images/web-boda-Danielycristi-05_opt.jpg",
+        "https://danielycristi.com/images/web-boda-Danielycristi-05_opt.jpg",
       locationName: "Parroquia San Juan Macías",
       locationAddress:
         "Av. Acueducto #5451 Puerta de Hierro 45116, Zapopan, Jalisco",
@@ -16,9 +16,9 @@ export function Itinerary({ bannerImage }) {
     },
     {
       title: "RECEPCIÓN",
-      icon: "http://danielycristi.com/images/web-boda-DanielyCristi-17.png",
+      icon: "https://danielycristi.com/images/web-boda-DanielyCristi-17.png",
       image:
-        "http://danielycristi.com/images/web-boda-Danielycristi-06_opt.jpg",
+        "https://danielycristi.com/images/web-boda-Danielycristi-06_opt.jpg",
       locationName: "La Bendita Espacio Eventos",
       locationAddress:
         "Av.Circunvalación del Bosque #2001 Col. El Bajío, Zapopan, Jalisco",
@@ -26,9 +26,9 @@ export function Itinerary({ bannerImage }) {
     },
     {
       title: "DESVELADOS",
-      icon: "http://danielycristi.com/images/web-boda-DanielyCristi-16.png",
+      icon: "https://danielycristi.com/images/web-boda-DanielyCristi-16.png",
       image:
-        "http://danielycristi.com/images/web-boda-Danielycristi-07_opt.jpg",
+        "https://danielycristi.com/images/web-boda-Danielycristi-07_opt.jpg",
       locationName: "La Bendita Espacio Eventos",
       locationAddress:
         "Av.Circunvalación del Bosque #2001 Col. El Bajío, Zapopan, Jalisco",
