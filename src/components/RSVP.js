@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Email from "../smtp";
 
 export function RSVP() {
 
@@ -185,14 +184,14 @@ export function RSVP() {
 
     htmlString += '<p><b>Atentamente:</b><br/>IDoEvent | Punto Doce</p>';
 
-    Email.send({
+    window.Email.send({
       Host: process.env.EMAIL_HOST,
       Username: process.env.EMAIL_USER,
       Password: process.env.EMAIL_PWD,
       To: process.env.EMAIL_DESTINATION,
       From: process.env.EMAIL_USER,
       Subject: "Nueva respuesta en formulario de boda",
-      Body: htmlString
+      Html: htmlString
     }).then(() => {
       setFormSent(true);
       setIsRequestPending(false);
