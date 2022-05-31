@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 export function RSVP() {
+
+  const [formSent, setFormSent] = useState(false);
+
   const rsvpQuestions = [
     {
       name: "attending",
@@ -159,13 +162,38 @@ export function RSVP() {
   }
 
 
-  function sendForm() {
+  async function sendForm(event) {
+    event.preventDefault();
 
+    var userAnswers = [];
+    for (var i = 0; i < rsvpQuestions.length; i++) {
+      var options = rsvpQuestions[i].options ? rsvpQuestions[i].options.filter((option) => option.isChecked) : null;
+
+      var answerObject = {
+        title: rsvpQuestions[i].title || rsvpQuestions[i].placeholder,
+        value: options || rsvpQuestions[i].value
+      }
+      userAnswers.push(answerObject);
+    }
+
+    var requestContract = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+      body: JSON.stringify({ answers: userAnswers, wedsEmail: "alfredordgz98@gmail.com" })
+    }
+    const response = await fetch(`https://danielycristi.com/react-php/rest/api.php?tp=rsvp`, requestContract);
+    console.log(response);
+
+    if (response.status === 200) {
+      setFormSent(true);
+    } else {
+      // TODO: handle error
+    }
   }
 
   return (
     <div id="rsvp" className="container">
-      <div className="rsvp-form-container text-center">
+      <div className={formSent ? "rsvp-form-container text-center hidden" : "rsvp-form-container text-center"}>
         <h2>CONFIRMA TU ASISTENCIA</h2>
         <p style={{ margin: "20px", fontSize: "12px" }}>
           ¡QUEREMOS COMPARTIR ESTE MOMENTO TAN ESPERADO CONTIGO! <br /> POR
@@ -202,6 +230,14 @@ export function RSVP() {
         <p style={{ margin: "20px", fontSize: "12px" }}>
           NO OLVIDES USAR EL HASHTAG #DANIELYCRISTI
           #DANIELUGIVEHERALIFEFULLOFADVENTURES
+        </p>
+      </div>
+
+
+      <div className={formSent ? "rsvp-form-container text-center" : "rsvp-form-container text-center hidden"}>
+        <h2>HEMOS CONFIRMADO TU ASISTENCIA</h2>
+        <p style={{ margin: "20px", fontSize: "12px" }}>
+          Gracias por llenar el formulario. Hemos recibido el correo de confirmación de manera exitosa y se ha concluido con tu registro para la boda. ¡Te esperamos!
         </p>
       </div>
 
