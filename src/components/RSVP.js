@@ -181,14 +181,19 @@ export function RSVP() {
     var requestContract = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
-      body: JSON.stringify({ answers: userAnswers, wedsEmail: "alfredordgz98@gmail.com" })
+      body: JSON.stringify({ answers: userAnswers })
     }
-    const response = await fetch(`https://danielycristi.com/react-php/rest/api.php?tp=rsvp`, requestContract);
 
-    if (response.status === 200) {
-      setFormSent(true);
-    } else {
-      // TODO: handle error
+    try {
+      const response = await fetch(`https://danielycristi.com/react-php/rest/api.php?tp=rsvp`, requestContract);
+
+      if (response.status === 200) {
+        setFormSent(true);
+      } else {
+        alert("Error al enviar el formulario. Intente más tarde.");
+      }
+    } catch (err) {
+      alert("Error en el servidor. Intente más tarde.");
     }
 
     setIsRequestPending(false);
