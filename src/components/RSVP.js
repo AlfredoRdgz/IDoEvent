@@ -173,7 +173,7 @@ export function RSVP() {
 
       var answerObject = {
         title: rsvpQuestions[i].title || rsvpQuestions[i].placeholder,
-        value: JSON.stringify(options) || rsvpQuestions[i].value
+        value: rsvpQuestions[i].value || JSON.stringify(options)
       }
       userAnswers.push(answerObject);
     }
@@ -185,7 +185,7 @@ export function RSVP() {
     }
 
     try {
-      const response = await fetch(`https://danielycristi.com/react-php/rest/api.php?tp=rsvp`, requestContract);
+      const response = await fetch(`https://i-do-backend.herokuapp.com/rsvp/confirmation`, requestContract);
 
       if (response.status === 200) {
         setFormSent(true);
