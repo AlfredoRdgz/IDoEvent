@@ -7,14 +7,14 @@ export function Wishlist() {
     {
       image: "https://danielycristi.com/images/web-boda-DanielyCristi-20.png",
       title: "Daniel Romo y Ana Cristina González Carballo",
-      description: "Número de evento: 50481006",
+      description: "Número de evento: 50819677",
       url: "https://mesaderegalos.liverpool.com.mx/milistaderegalos/50819677",
     },
     {
       image: "https://danielycristi.com/images/web-boda-DanielyCristi-21.png",
       title: "Daniel y Cristi",
       description:
-        "Da clic en el botón de ver mesa y luego ingresa el CP 60201, Evanston para verificar disponibilidad de productos",
+        "Da clic en el botón de ver mesa y luego ingresa el CP 45640, Guadalajara, Jalisco para verificar disponibilidad de productos",
       url: "https://www.amazon.com.mx/wedding/share/danielycristi",
     },
   ];

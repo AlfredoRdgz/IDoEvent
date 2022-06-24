@@ -46,7 +46,7 @@ export function Countdown() {
         style={{ width: "50px" }}
       />
       <h2>WE ARE GETTING MARRIED</h2>
-      <p>UNIREMOS NUESTRAS VIDAS EN MATRIMONIO</p>
+      <p>UNIREMOS NUESTRAS VIDAS EN MATRIMONIO CON LA BENDICIÓN DE DIOS Y NUESTROS PADRES</p>
 
       <div className="container w-100" style={{ padding: "0" }}>
         <div className="row m-0 p-0">

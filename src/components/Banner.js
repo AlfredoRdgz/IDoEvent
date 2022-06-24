@@ -12,7 +12,7 @@ export function Banner({ bannerImage }) {
         backgroundImage:
           "url('https://danielycristi.com/images/web-boda-Danielycristi-03_opt.jpg')",
         backgroundSize: "cover",
-        backgroundPosition: "center center",
+        backgroundPosition: "60% 50%",
       }}
     >
       <div className="banner-title-container">

@@ -516,3 +516,9 @@ input {
 .hidden {
   display: none;
 }
+
+@media screen and (max-width: 450px){
+  .hashtag {
+    line-break: anywhere;
+  }
+}

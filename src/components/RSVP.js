@@ -235,7 +235,7 @@ export function RSVP() {
           <button className="btn btn-gray" disabled={isRequestPending}>ENVIAR CONFIRMACIÓN</button>
         </form>
 
-        <p style={{ margin: "20px", fontSize: "12px" }}>
+        <p className="hashtag" style={{ margin: "20px 0px", fontSize: "12px" }}>
           NO OLVIDES USAR EL HASHTAG #DANIELYCRISTI
           #DANIELUGIVEHERALIFEFULLOFADVENTURES
         </p>
