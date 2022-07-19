@@ -14,7 +14,7 @@ export function Wishlist() {
       image: "https://danielycristi.com/images/web-boda-DanielyCristi-21.png",
       title: "Daniel y Cristi",
       description:
-        "Da clic en el botón de ver mesa y luego ingresa el CP 45640, Guadalajara, Jalisco para verificar disponibilidad de productos",
+        "No olvides dar clic en la dirección de Ana Cristina González Carballo Chávez: Paseo de los laureles 229, el palomar secc bosques, Tlajomulco de Zúñiga, Jalisco, 45643",
       url: "https://www.amazon.com.mx/wedding/share/danielycristi",
     },
   ];
