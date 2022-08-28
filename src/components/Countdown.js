@@ -48,6 +48,8 @@ export function Countdown() {
       <h2>WE ARE GETTING MARRIED</h2>
       <p>UNIREMOS NUESTRAS VIDAS EN MATRIMONIO CON LA BENDICIÓN DE DIOS Y NUESTROS PADRES</p>
 
+      <p>Santiago González Carballo<br/>Ana Chávez<br/><br/>Lourdes Torres<br/>Eliseo Romo</p>
+
       <div className="container w-100" style={{ padding: "0" }}>
         <div className="row m-0 p-0">
           <div className="col-6 col-md-3 my-4" style={{ padding: "0px 5px" }}>

@@ -22,6 +22,7 @@ export function Itinerary({ bannerImage }) {
       locationName: "La Bendita Espacio Eventos",
       locationAddress:
         "Av.Circunvalación del Bosque #2001 Col. El Bajío, Zapopan, Jalisco",
+      locationUrl: "https://goo.gl/maps/2K9Ruoo8Uq86jkqi8",
       time: "9:30 PM",
     },
     {
@@ -32,6 +33,7 @@ export function Itinerary({ bannerImage }) {
       locationName: "La Bendita Espacio Eventos",
       locationAddress:
         "Av.Circunvalación del Bosque #2001 Col. El Bajío, Zapopan, Jalisco",
+      locationUrl: "https://goo.gl/maps/2K9Ruoo8Uq86jkqi8",
       time: "3:00 AM",
     },
   ];

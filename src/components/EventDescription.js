@@ -5,7 +5,8 @@ export function EventDescription({ event }) {
   const eventLocationName = event.locationName;
   const eventAddress = event.locationAddress;
   const eventTime = event.time;
-  const mapUrl =
+  const mapUrl = event.locationUrl ?
+    event.locationUrl :
     "https://maps.google.com/maps?q=" + encodeURIComponent(eventAddress);
 
   return (
