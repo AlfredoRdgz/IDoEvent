@@ -2,40 +2,29 @@ import React from "react";
 import "../App.css";
 import { ItineraryEvent } from "./ItineraryEvent";
 
-export function Itinerary({ bannerImage }) {
+export function Itinerary() {
   const events = [
     {
-      title: "CEREMONIA",
-      icon: "https://danielycristi.com/images/web-boda-DanielyCristi-15.png",
+      title: "Ceremonia",
+      icon: "https://pauyandres.com/img/web-pau_andres-05.png",
       image:
         "https://danielycristi.com/images/web-boda-Danielycristi-05_opt.jpg",
       locationName: "Parroquia San Juan Macías",
       locationAddress:
         "Av. Acueducto #5451 Puerta de Hierro 45116, Zapopan, Jalisco",
-      time: "8:00 PM",
+      time: "2:00 PM",
     },
     {
-      title: "RECEPCIÓN",
-      icon: "https://danielycristi.com/images/web-boda-DanielyCristi-17.png",
+      title: "Recepción",
+      icon: "https://pauyandres.com/img/web-pau_andres-06.png",
       image:
         "https://danielycristi.com/images/web-boda-Danielycristi-06_opt.jpg",
-      locationName: "La Bendita Espacio Eventos",
+      locationName: "Lago del Rey",
       locationAddress:
-        "Av.Circunvalación del Bosque #2001 Col. El Bajío, Zapopan, Jalisco",
+        "Av Ramón Corona #5243, 45201 Guadalajara, Jalisco",
       locationUrl: "https://goo.gl/maps/2K9Ruoo8Uq86jkqi8",
-      time: "9:30 PM",
-    },
-    {
-      title: "DESVELADOS",
-      icon: "https://danielycristi.com/images/web-boda-DanielyCristi-16.png",
-      image:
-        "https://danielycristi.com/images/web-boda-Danielycristi-07_opt.jpg",
-      locationName: "La Bendita Espacio Eventos",
-      locationAddress:
-        "Av.Circunvalación del Bosque #2001 Col. El Bajío, Zapopan, Jalisco",
-      locationUrl: "https://goo.gl/maps/2K9Ruoo8Uq86jkqi8",
-      time: "3:00 AM",
-    },
+      time: "3:30 PM",
+    }
   ];
 
   return (

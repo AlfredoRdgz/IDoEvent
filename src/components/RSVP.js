@@ -204,9 +204,7 @@ export function RSVP() {
       <div className={formSent ? "rsvp-form-container text-center hidden" : "rsvp-form-container text-center"}>
         <h2>CONFIRMA TU ASISTENCIA</h2>
         <p style={{ margin: "20px", fontSize: "12px" }}>
-          ¡QUEREMOS COMPARTIR ESTE MOMENTO TAN ESPERADO CONTIGO! <br /> POR
-          FAVOR AYÚDANOS CONFIRMANDO TU ASISTENCIA Y SE PARTE DE NUESTRO GRAN
-          DÍA.
+          ¡Queremos compartir este momento tan esperado contigo! <br /> Por favor ayúdanos confirmando tu asistencia y se parte de nuestro gran día
         </p>
 
         <form style={{ display: "flex", flexDirection: "column" }} onSubmit={sendForm}>
@@ -232,13 +230,8 @@ export function RSVP() {
               })
             }
           </div>
-          <button className="btn btn-gray" disabled={isRequestPending}>ENVIAR CONFIRMACIÓN</button>
+          <button className="btn btn-gray" disabled={isRequestPending}>Enviar confirmación</button>
         </form>
-
-        <p className="hashtag" style={{ margin: "20px 0px", fontSize: "12px" }}>
-          NO OLVIDES USAR EL HASHTAG #DANIELYCRISTI
-          #DANIELUGIVEHERALIFEFULLOFADVENTURES
-        </p>
       </div>
 
 
@@ -248,8 +241,6 @@ export function RSVP() {
           Gracias por llenar el formulario. Hemos recibido el correo de confirmación de manera exitosa y se ha concluido con tu registro para la boda. ¡Te esperamos!
         </p>
       </div>
-
-      <h2 className="cursive text-center"> Always and truly yours forever</h2>
     </div>
   );
 }

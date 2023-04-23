@@ -22,13 +22,6 @@ export function Header() {
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <a href="#banner">
-            <img
-              className="header-logo"
-              alt="DanielYCristi"
-              src="https://danielycristi.com/images/web-boda-DanielyCristi-13.png"
-            />
-          </a>
         </div>
         <div className={showMobileMenu ? "navbar show p-0 m-0" : "navbar-collapse collapse"}>
           <div className="menu row">
@@ -44,13 +37,6 @@ export function Header() {
 
       <nav id="header" className={`${transparent ? "transparent" : ""}`}>
         <div className="row">
-          <a href="#banner">
-            <img
-              className="header-logo"
-              alt="DanielYCristi"
-              src="https://danielycristi.com/images/web-boda-DanielyCristi-13.png"
-            />
-          </a>
           <div className="menu row">
             <a href="#banner">BODA</a>
             <a href="#itinerary">ITINERARIO</a>

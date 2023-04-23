@@ -38,7 +38,7 @@ h4,
 h5 {
   font-family: Cochin !important;
   font-weight: bold !important;
-  color: #B5B090;
+  color: #bc795e;
 }
 
 p,
@@ -68,7 +68,6 @@ input {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #F8F6F4;
 }
 
 #headerMobile {
@@ -188,7 +187,7 @@ input {
 }
 
 #countdown h2 {
-  color: #B5B090;
+  color: #bc795e;
   font-weight: bold;
   font-family: "Header";
 }
@@ -198,8 +197,6 @@ input {
 }
 
 .countdown-time-container {
-  background-color: #F8F6F4;
-  border: 1px solid #B5B090;
   text-align: center;
   padding: 10px;
   margin: auto;
@@ -240,7 +237,7 @@ input {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #B5B090;
+  background-color: #c5a98c;
   top: 5px;
   bottom: 0;
   left: 50%;
@@ -370,7 +367,7 @@ input {
 .btn,
 .btn a {
   margin: 10px 0;
-  background-color: #B5B090;
+  background-color: #c5a98c;
   color: white;
 }
 
@@ -421,7 +418,7 @@ input {
 
 /*RSVP*/
 .rsvp-form-container {
-  border: 10px solid #B5B090;
+  border: 10px solid #9b0200;
   background-color: #F8F6F4;
   max-width: 600px;
   margin: 40px auto;
@@ -445,7 +442,7 @@ input {
 }
 
 .rsvp-input-gray {
-  background-color: #B5B090;
+  background-color: #bc795e;
   border: none;
   padding: 10px;
   color: #fff;

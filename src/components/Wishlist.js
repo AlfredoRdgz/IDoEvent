@@ -5,16 +5,23 @@ export function Wishlist() {
 
   const wishlistArray = [
     {
-      image: "https://danielycristi.com/images/web-boda-DanielyCristi-20.png",
-      title: "Daniel Romo y Ana Cristina González Carballo",
-      description: "Número de evento: 50819677",
-      url: "https://mesaderegalos.liverpool.com.mx/milistaderegalos/50819677",
+      image: "https://pauyandres.com/img/web-pau_andres-09.png",
+      title: "Paulina Valencia Jiménes y Jorge Andrés Villa del Sordo",
+      description: "Número de evento: 50481006",
+      url: "https://mesaderegalos.liverpool.com.mx/milistaderegalos/50481006",
     },
     {
-      image: "https://danielycristi.com/images/web-boda-DanielyCristi-21.png",
-      title: "Daniel y Cristi",
+      image: "https://pauyandres.com/img/web-pau_andres-10.png",
+      title: "Pau y Andrés",
       description:
-        "No olvides dar clic en la dirección de Ana Cristina González Carballo Chávez: Paseo de los laureles 229, el palomar secc bosques, Tlajomulco de Zúñiga, Jalisco, 45643",
+      "Da click en el botón de ver mesa y luego ingresa el CP 60201, Evanston para verificar disponibilidad de productos",
+      url: "https://www.amazon.com.mx/wedding/share/danielycristi",
+    },
+    {
+      image: "https://pauyandres.com/img/web-pau_andres-11.png",
+      title: "Paulina Valencia Jiménes",
+      description:
+        "Número de cuenta: 1545521269. Cuenta CLABE:012180015455212692",
       url: "https://www.amazon.com.mx/wedding/share/danielycristi",
     },
   ];
@@ -26,9 +33,9 @@ export function Wishlist() {
         <img
           alt="Dress code"
           style={{ width: "75px", marginBottom: "20px" }}
-          src="https://danielycristi.com/images/web-boda-DanielyCristi-19.png"
+          src="https://pauyandres.com/img/web-pau_andres-08.png"
         />
-        <p>SU PRESENCIA ES NUESTRO MEJOR REGALO.<br /> SI DESEAS DARNOS UN OBSEQUIO LES COMPARTIMOS NUESTRA MESA DE REGALOS.</p>
+        <p>Su presencia es nuestro mejor regalo, si deseas darnos un obsequio les compartimos nuestra mesa de regalos.</p>
         <div className="row">
           {wishlistArray.map((wishlist) => {
             const className = "my-4 col-12 col-md-" + 12 / wishlistArray.length;
@@ -53,7 +60,6 @@ export function Wishlist() {
             );
           })}
         </div>
-        <p>Agradecemos que nos notifiquen si nos hacen llegar un regalo de Liverpool. Como sabrán, en ocasiones no entregan completo lo que ustedes con mucho cariño nos hicieron favor de regalarnos y nos gustaría agradecerles personalmente.</p>
       </div>
     </div>
   );

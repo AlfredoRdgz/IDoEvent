@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 
 export function Countdown() {
-  const date = new Date('2022-11-26T00:00:00').getTime();
+  const date = new Date('2023-10-28T00:00:00').getTime();
 
   // Get today's date and time
   var now = new Date().getTime();
@@ -42,13 +42,12 @@ export function Countdown() {
     <div id="countdown">
       <img
         alt="DanielYCristi"
-        src="https://danielycristi.com/images/web-boda-DanielyCristi-14.png"
-        style={{ width: "50px" }}
+        src="https://pauyandres.com/img/web-pau_andres-04.png"
+        style={{ width: '75px' }}
       />
-      <h2>WE ARE GETTING MARRIED</h2>
-      <p>UNIREMOS NUESTRAS VIDAS EN MATRIMONIO CON LA BENDICIÓN DE DIOS Y NUESTROS PADRES</p>
-
-      <p>Santiago González Carballo<br/>Ana Chávez<br/><br/>Lourdes Torres<br/>Eliseo Romo</p>
+      <h2>PAULINA & JORGE ANDRÉS</h2>
+      <p>28 de octubre de 2023</p>
+      <p>Uniremos nuestras vidas en matrimonio</p>
 
       <div className="container w-100" style={{ padding: "0" }}>
         <div className="row m-0 p-0">
@@ -85,6 +84,11 @@ export function Countdown() {
             </div>
           </div>
         </div>
+        
+        
+      <p>Roberto Iván Valencia Sevilla<br/>Martha Amelia Jiménez García-Moreno</p>
+      
+      <p>Rodolfo Villa Flores<br/>Gabriela Delsordo Cornejo</p>
       </div>
     </div>
   );
