@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css";
 
 export function DressCode() {
   const dressCodeDescription = "RIGUROSO FORMAL";
@@ -11,8 +10,7 @@ export function DressCode() {
     <div id="dressCode" className="container">
       <div className="row">
         <div
-          className="col-12 col-md-6 text-center dress-code-description"
-          style={{ display: "flex" }}
+          className="col-12 text-center dress-code-description"
         >
           <div className="dress-code-description-container">
             <img

@@ -5,40 +5,61 @@
 
 @font-face {
   font-family: ENRIQ;
-  src: url("./styles/ENRIQ.otf");
+  src: url("./ENRIQ.otf");
 }
 
 @font-face {
   font-family: Gotham Bold;
-  src: url("./styles/Gotham-Bold.otf");
+  src: url("./Gotham-Bold.otf");
 }
 
 @font-face {
   font-family: Gotham Book;
-  src: url("./styles/Gotham-Book.otf");
+  src: url("./Gotham-Book.otf");
 }
 
 @font-face {
   font-family: Cochin;
-  src: url("./styles/Cochin.ttf");
+  src: url("./Cochin.ttf");
 }
 
 @font-face {
   font-family: MonoAndFriendsLa;
-  src: url("./styles/monoandfriendsla-Regular.otf");
+  src: url("./monoandfriendsla-Regular.otf");
+}
+
+@font-face {
+  font-family: Marion;
+  src: url("./Marion\ The\ Essentials.ttf");
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("./Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: Neuton;
+  src: url("./Neuton-Light.ttf");
+}
+
+@font-face {
+  font-family: Antic;
+  src: url("./AnticDidone-Regular.ttf");
 }
 
 h1 {
-  font-family: ENRIQ !important;
+  font-family: Marion !important;
+  font-size: 75px;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  font-family: Cochin !important;
-  font-weight: bold !important;
-  color: #bc795e;
+  font-family: Antic !important;
+  color: #9b0200;
+  font-size: 50px;
 }
 
 p,
@@ -46,7 +67,7 @@ div,
 span,
 li,
 input {
-  font-family: Gotham Book !important;
+  font-family: Montserrat !important;
 }
 
 .cursive {
@@ -55,7 +76,7 @@ input {
 }
 
 .time {
-  font-family: Gotham Bold !important;
+  font-family: Montserrat !important;
 }
 
 .cochin {
@@ -186,10 +207,15 @@ input {
   text-align: center;
 }
 
+#countdown h1 {
+  color: black;
+  font-family: Marion !important;
+}
+
 #countdown h2 {
   color: #bc795e;
   font-weight: bold;
-  font-family: "Header";
+  font-family: Montserrat;
 }
 
 #countdown p {
@@ -211,6 +237,17 @@ input {
     width: 100%;
     height: auto;
   }
+}
+
+.parents-container {
+  background-color: #c5a98c;
+  margin: 0 20px;
+  padding: 20px;
+}
+
+.parents-container p {
+  margin: auto;
+  color: white !important;
 }
 
 .intermediate-banner {
@@ -367,7 +404,7 @@ input {
 .btn,
 .btn a {
   margin: 10px 0;
-  background-color: #c5a98c;
+  background-color: #9b0200;
   color: white;
 }
 
@@ -378,12 +415,13 @@ input {
 /* DRESS CODE */
 
 .dress-code-description-container {
-  margin: auto;
-  border: 10px solid #F8F6F4;
+  margin: 40px auto;
+  padding: 20px;
+  border: 10px solid #9b0200;
 }
 
 .dress-code-description * {
-  margin: 10px 0;
+  max-width: 400px;
 }
 
 .dress-code-description-image {
@@ -416,6 +454,10 @@ input {
   height: 50px;
 }
 
+.wishlist-title {
+  color: #bc795e !important;
+}
+
 /*RSVP*/
 .rsvp-form-container {
   border: 10px solid #9b0200;
@@ -442,7 +484,7 @@ input {
 }
 
 .rsvp-input-gray {
-  background-color: #bc795e;
+  background-color: #d4d4d2;
   border: none;
   padding: 10px;
   color: #fff;
@@ -458,6 +500,11 @@ input {
   border-bottom: 1px solid #B5B090;
   color: #000000;
   text-align: center;
+}
+
+.rsvp-btn {
+  background-color: #bc795e;
+  color: white;
 }
 
 @media screen and (max-width: 768px) {

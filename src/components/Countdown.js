@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../App.css";
 
 export function Countdown() {
   const date = new Date('2023-10-28T00:00:00').getTime();
@@ -41,11 +40,11 @@ export function Countdown() {
   return (
     <div id="countdown">
       <img
-        alt="DanielYCristi"
+        alt="PauYAndrés"
         src="https://pauyandres.com/img/web-pau_andres-04.png"
         style={{ width: '75px' }}
       />
-      <h2>PAULINA & JORGE ANDRÉS</h2>
+      <h1>PAULINA & JORGE ANDRÉS</h1>
       <p>28 de octubre de 2023</p>
       <p>Uniremos nuestras vidas en matrimonio</p>
 
@@ -85,10 +84,14 @@ export function Countdown() {
           </div>
         </div>
         
-        
-      <p>Roberto Iván Valencia Sevilla<br/>Martha Amelia Jiménez García-Moreno</p>
-      
-      <p>Rodolfo Villa Flores<br/>Gabriela Delsordo Cornejo</p>
+        <div className="row">
+          <div className="col-6 col-md 12 parents-container">
+            <p>Roberto Iván Valencia Sevilla<br/>Martha Amelia Jiménez García-Moreno</p>
+          </div>
+          <div className="col-6 col-md 12 parents-container">
+            <p>Rodolfo Villa Flores<br/>Gabriela Delsordo Cornejo</p>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../App.css";
 
 export function Gallery() {
   const title = "PAU & ANDRÉS";
@@ -38,9 +37,13 @@ export function Gallery() {
   return (
     <div id="gallery">
       <div className="row p-4">
-        <div className="col-12 col-md-4 p-2">
+        <div className="col-12 col-md-4">
           <img className="gallery-image" alt={title} src={galleryImages[0]} onClick={() => setSelectedImage(0)} />
+        </div>
+        <div className="col-12 col-md-4">
           <img className="gallery-image" alt={title} src={galleryImages[1]} onClick={() => setSelectedImage(1)} />
+        </div>
+        <div className="col-12 col-md-4">
           <img className="gallery-image" alt={title} src={galleryImages[2]} onClick={() => setSelectedImage(2)} />
         </div>
       </div>

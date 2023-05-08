@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css";
 
 export function Wishlist() {
 
@@ -30,12 +29,12 @@ export function Wishlist() {
     <div id="wishlist">
       <div className="container text-center">
         <h2>MESA DE REGALOS</h2>
+        <p>Su presencia es nuestro mejor regalo, si deseas darnos un obsequio les compartimos nuestra mesa de regalos.</p>
         <img
           alt="Dress code"
-          style={{ width: "75px", marginBottom: "20px" }}
+          style={{ width: "50px", marginBottom: "20px" }}
           src="https://pauyandres.com/img/web-pau_andres-08.png"
         />
-        <p>Su presencia es nuestro mejor regalo, si deseas darnos un obsequio les compartimos nuestra mesa de regalos.</p>
         <div className="row">
           {wishlistArray.map((wishlist) => {
             const className = "my-4 col-12 col-md-" + 12 / wishlistArray.length;
@@ -49,7 +48,7 @@ export function Wishlist() {
                 <div className="wishlist-item">
                   <img alt={wishlist.title} src={wishlist.image} />
                   <div>
-                    <p className="my-2">{wishlist.title}</p>
+                    <p className="my-2 wishlist-title">{wishlist.title}</p>
                     <p className="my-2">{wishlist.description}</p>
                     <button className="btn my-2">
                       <a href={wishlist.url} rel="noreferrer" target="_blank">VER MESA</a>

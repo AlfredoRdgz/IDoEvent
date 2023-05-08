@@ -1,5 +1,5 @@
 import React from "react";
-import { DanielCristi } from "./templates/DanielCristi";
+import { PauAndres } from "./templates/PauAndres";
 
 export function Landing() {
   const templateId = 1; 
@@ -8,7 +8,7 @@ export function Landing() {
     <div id="masterPage">
       {
         templateId === 1 ?
-          <DanielCristi />
+          <PauAndres />
           : null
       }
     </div>

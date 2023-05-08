@@ -24,23 +24,17 @@ export function RSVP() {
     },
     {
       name: "guestCount",
-      title: "¿Cuántos invitados asistirán a la boda? *",
+      title: "¿Cuántos invitados asistirán en total a la boda? *",
       type: "selectCount",
-      placeholder: "Referencia mostrada en la invitación previamente enviada",
+      placeholder: "Únicamente el número de invitados señalados en el boleto",
       min: 0,
       max: 6
-    },
-    {
-      name: "guestNames",
-      title: "Nombre(s) de invitado(s) *",
-      type: "textarea",
-      placeholder: "Ingrese el nombre completo de todos los invitados que asistirán",
     },
     {
       name: "drinks",
       title: "¿Qué les gustaría tomar?",
       type: "option",
-      options: [{ value: "Tequila", isChecked: false }, { value: "Ron", isChecked: false }, { value: "Vodka", isChecked: false }, { value: "Whiskey", isChecked: false }]
+      options: [{ value: "Tequila", isChecked: false }, { value: "Ron", isChecked: false }, { value: "Vodka", isChecked: false }, { value: "Whiskey", isChecked: false }, { value: "Gin", isChecked: false }]
     }
   ];
 
@@ -230,7 +224,7 @@ export function RSVP() {
               })
             }
           </div>
-          <button className="btn btn-gray" disabled={isRequestPending}>Enviar confirmación</button>
+          <button className="btn rsvp-btn" disabled={isRequestPending}>Enviar confirmación</button>
         </form>
       </div>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/DanielCristi.css";
+import "../../styles/PauYAndres.css";
 import { Header } from "../../components/Header";
 import { Banner } from "../../components/Banner";
 import { Countdown } from "../../components/Countdown";
@@ -9,24 +9,21 @@ import { Wishlist } from "../../components/Wishlist";
 import { RSVP } from "../../components/RSVP";
 import { Gallery } from "../../components/Gallery";
 
-export function DanielCristi() {
-  const bannerImage =
-    "https://danielycristi.com/images/web-boda-DanielyCristi-13.png";
-  const backgroundImage1 =
-    "url('https://danielycristi.com/images/web-boda-Danielycristi-04_opt.jpg')";
+export function PauAndres() {
+  const bannerImage = "https://pauyandres.com/img/web-pau_andres-03.jpg";
 
   return (
     <div id="template">
-      <div className="banner-container">
-        <Header />
-        <Banner bannerImage={bannerImage} />
-      </div>
+    <div className="banner-container">
+      <Header />
+      <Banner bannerImage={bannerImage} />
+    </div>
       <Countdown />
-      <div style={{ backgroundImage: backgroundImage1 }} className="intermediate-banner"></div>
       <Itinerary />
       <DressCode />
       <Wishlist />
       <RSVP/>
+      <h2 className="text-center">RECOMENDACIONES</h2>
       <Gallery />
     </div>
   );

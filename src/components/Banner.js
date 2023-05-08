@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css";
 
 export function Banner({ bannerImage }) {
   const title = "PAULINA & JORGE ANDRÉS'";
@@ -15,14 +14,6 @@ export function Banner({ bannerImage }) {
         backgroundPosition: "60% 50%",
       }}
     >
-      <div className="banner-title-container">
-        <div style={{ margin: "auto" }}>
-          <h1 style={{ color: "white" }}> {title} </h1>
-          <hr className="banner-division" />
-          <p>{date}</p>
-          <img className="banner-logo" alt="Paulina & Jorge Andrés'" src={bannerImage} />
-      </div>
-      </div>
     </div>
   );
 }
