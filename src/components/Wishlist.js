@@ -43,14 +43,13 @@ export function Wishlist() {
               <div
                 key={wishlist.title}
                 className={className}
-                style={{ display: "flex" }}
               >
                 <div className="wishlist-item">
                   <img alt={wishlist.title} src={wishlist.image} />
                   <div>
                     <p className="my-2 wishlist-title">{wishlist.title}</p>
                     <p className="my-2">{wishlist.description}</p>
-                    <button className="btn my-2">
+                    <button className="wishlist-btn btn my-2">
                       <a href={wishlist.url} rel="noreferrer" target="_blank">VER MESA</a>
                     </button>
                   </div>

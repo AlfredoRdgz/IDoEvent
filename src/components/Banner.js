@@ -11,7 +11,7 @@ export function Banner({ bannerImage }) {
         backgroundImage:
           "url('https://pauyandres.com/img/web-pau_andres-03.jpg')",
         backgroundSize: "cover",
-        backgroundPosition: "60% 50%",
+        backgroundPosition: "52%",
       }}
     >
     </div>

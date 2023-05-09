@@ -84,12 +84,16 @@ export function Countdown() {
           </div>
         </div>
         
-        <div className="row">
-          <div className="col-6 col-md 12 parents-container">
-            <p>Roberto Iván Valencia Sevilla<br/>Martha Amelia Jiménez García-Moreno</p>
+        <div className="row parents-row">
+          <div className="col-sm-6 col-12 p-2">  
+            <div className="parents-container">
+              <p>Roberto Iván Valencia Sevilla<br/>Martha Amelia Jiménez García-Moreno</p>
+            </div>
           </div>
-          <div className="col-6 col-md 12 parents-container">
-            <p>Rodolfo Villa Flores<br/>Gabriela Delsordo Cornejo</p>
+          <div className="col-sm-6 col-12 p-2">
+            <div className="parents-container">
+              <p>Rodolfo Villa Flores<br/>Gabriela Delsordo Cornejo</p>
+            </div>
           </div>
         </div>
       </div>
