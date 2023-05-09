@@ -19,33 +19,33 @@ export function PauAndres() {
     iconUrl: "https://pauyandres.com/img/web-pau_andres-12.png",
     description: "Te dejamos estas recomendaciones de hoteles que serán de gran ayuda para el día de nuestro evento y tu estadía en Guadalajara.",
     locations: [
-      { name: "Hyatt Regency Andares", imageUrl: "", redirectUrl: "" },
-      { name: "Hotel Demetria", imageUrl: "", redirectUrl: "" },
-      { name: "Wydham Garden Guadalajara Acueducto", imageUrl: "", redirectUrl: "" },
-      { name: "Quinta Real", imageUrl: "", redirectUrl: "" },
-      { name: "Fiesta Americana", imageUrl: "", redirectUrl: "" },
-      { name: "Holiday Inn Express Vallarta Poniente", imageUrl: "", redirectUrl: "" }
+      { name: "Hyatt Regency Andares", imageUrl: "https://pauyandres.com/img/web-pau_andres-13.jpg", redirectUrl: "https://goo.gl/maps/NTQnipbDMs4BFuui9" },
+      { name: "Hotel Demetria", imageUrl: "https://pauyandres.com/img/web-pau_andres-14.jpg", redirectUrl: "https://goo.gl/maps/7hSpmUHjLtH1id4e7" },
+      { name: "Wydham Garden Guadalajara Acueducto", imageUrl: "https://pauyandres.com/img/web-pau_andres-15.jpg", redirectUrl: "https://goo.gl/maps/BUTgZJkC5D9PGFKV8" },
+      { name: "Quinta Real", imageUrl: "https://pauyandres.com/img/web-pau_andres-16.jpg", redirectUrl: "https://goo.gl/maps/oMSpjqWhYT7v7DRF9" },
+      { name: "Fiesta Americana", imageUrl: "https://pauyandres.com/img/web-pau_andres-17.jpg", redirectUrl: "https://goo.gl/maps/nHFDTx2nUfGJHVDJ7" },
+      { name: "Holiday Inn Express Vallarta Poniente", imageUrl: "https://pauyandres.com/img/web-pau_andres-18.jpg", redirectUrl: "https://goo.gl/maps/FgV5a6byZSckUJjX9" }
     ]
   },
   {
     title: "Restaurantes",
     iconUrl: "https://pauyandres.com/img/web-pau_andres-19.png",
     locations:[
-      { name: "Anita Li", imageUrl: "https://pauyandres.com/img/web-pau_andres-20.png", redirectUrl: "" },
-      { name: "Restaurante Alcalde", imageUrl: "https://pauyandres.com/img/web-pau_andres-21.png", redirectUrl: "" },
-      { name: "La Docena", imageUrl: "https://pauyandres.com/img/web-pau_andres-22.png", redirectUrl: "" },
-      { name: "La Tequila", imageUrl: "https://pauyandres.com/img/web-pau_andres-23.png", redirectUrl: "" },
-      { name: "Karne Garibaldi", imageUrl: "https://pauyandres.com/img/web-pau_andres-24.png", redirectUrl: "" },
-      { name: "Il Duomo", imageUrl: "https://pauyandres.com/img/web-pau_andres-25.png", redirectUrl: "" },
+      { name: "Anita Li", imageUrl: "https://pauyandres.com/img/web-pau_andres-20.png", redirectUrl: "https://goo.gl/maps/ikzdXgn5Kpk34yiC7" },
+      { name: "Restaurante Alcalde", imageUrl: "https://pauyandres.com/img/web-pau_andres-21.png", redirectUrl: "https://goo.gl/maps/LE1TYWwpDKa2tbQR6" },
+      { name: "La Docena", imageUrl: "https://pauyandres.com/img/web-pau_andres-22.png", redirectUrl: "https://goo.gl/maps/gzSvkj7RvSDaEn5a8" },
+      { name: "La Tequila", imageUrl: "https://pauyandres.com/img/web-pau_andres-23.png", redirectUrl: "https://goo.gl/maps/VKFqLPqQsrrgB4Nd8" },
+      { name: "Il Duomo", imageUrl: "https://pauyandres.com/img/web-pau_andres-25.png", redirectUrl: "https://goo.gl/maps/Hckg3HPfitqRxkKe6" },
     ]
   },
   {
-    title: "Street food",
+    title: "Comida típica",
     iconUrl: "https://pauyandres.com/img/web-pau_andres-26.png",
     locations:[
-      { name: "Tortas Toño", imageUrl: "", redirectUrl: "" },
-      { name: "Los Alteños", imageUrl: "", redirectUrl: "" },
-      { name: "Tacos Omar Carlos", imageUrl: "", redirectUrl: "" },
+      { name: "Tortas Toño", imageUrl: "https://pauyandres.com/img/web-pau_andres-27.jpg", redirectUrl: "https://goo.gl/maps/mFptT3faRGU1jTfL7" },
+      { name: "Los Alteños", imageUrl: "https://pauyandres.com/img/web-pau_andres-28.jpg", redirectUrl: "https://goo.gl/maps/otDxCfT3Pw14kQZRA" },
+      { name: "Tacos Omar Carlos", imageUrl: "https://pauyandres.com/img/web-pau_andres-29.jpg", redirectUrl: "https://goo.gl/maps/dgkuunjckGh4FFj8A" },
+      { name: "Karne Garibaldi", imageUrl: "https://pauyandres.com/img/web-pau_andres-24.png", redirectUrl: "https://goo.gl/maps/Rxsq2uiDE9oATYq58" },
     ]
 
   },
@@ -54,12 +54,12 @@ export function PauAndres() {
     iconUrl: "https://pauyandres.com/img/web-pau_andres-30.png",
     description: "Te dejamos estas recomendaciones de lugares imprescindibles que no te puedes perder a lo largo de tu estadía en Guadalajara.",
     locations: [
-      { name: "San Pedro Tlaquepaque", imageUrl: "", redirectUrl: "" },
-      { name: "Tequila Jalisco", imageUrl: "", redirectUrl: "" },
-      { name: "Tapalpa Pueblo Mágico", imageUrl: "", redirectUrl: "" },
-      { name: "Visitar el Centro de Guadalajara", imageUrl: "", redirectUrl: "" },
-      { name: "Lago de Chapala", imageUrl: "", redirectUrl: "" },
-      { name: "Calaverandia parque temático día de muertos", imageUrl: "", redirectUrl: "" }
+      { name: "San Pedro Tlaquepaque", imageUrl: "https://pauyandres.com/img/web-pau_andres-31.jpg", redirectUrl: "" },
+      { name: "Tequila Jalisco", imageUrl: "https://pauyandres.com/img/web-pau_andres-32.jpg", redirectUrl: "https://goo.gl/maps/nmjBxzuSFbK4emJR7" },
+      { name: "Tapalpa Pueblo Mágico", imageUrl: "https://pauyandres.com/img/web-pau_andres-33.jpg", redirectUrl: "https://goo.gl/maps/xsmaXBiBvvTjwqrT9" },
+      { name: "Visitar el Centro de Guadalajara", imageUrl: "https://pauyandres.com/img/web-pau_andres-34.jpg", redirectUrl: "https://goo.gl/maps/uZzSHG85WkotpTWZ7" },
+      { name: "Lago de Chapala", imageUrl: "https://pauyandres.com/img/web-pau_andres-35.jpg", redirectUrl: "https://goo.gl/maps/79yFuJnFTF3FL5KUA" },
+      { name: "Calaverandia parque temático día de muertos", imageUrl: "https://pauyandres.com/img/web-pau_andres-36.jpg", redirectUrl: "https://goo.gl/maps/tpTU6HJ8nNY9YpZi6" }
     ]
   }];
 

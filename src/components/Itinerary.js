@@ -7,21 +7,22 @@ export function Itinerary() {
       title: "Ceremonia",
       icon: "https://pauyandres.com/img/web-pau_andres-05.png",
       image:
-        "https://danielycristi.com/images/web-boda-Danielycristi-05_opt.jpg",
+        "https://pauyandres.com/img/web-pau_andres-45.jpg",
       locationName: "Parroquia San Juan Macías",
       locationAddress:
         "Av. Acueducto #5451 Puerta de Hierro 45116, Zapopan, Jalisco",
+      locationUrl: "https://goo.gl/maps/HEUQH9CHhoCngzcq7",
       time: "2:00 PM",
     },
     {
       title: "Recepción",
       icon: "https://pauyandres.com/img/web-pau_andres-06.png",
       image:
-        "https://danielycristi.com/images/web-boda-Danielycristi-06_opt.jpg",
+        "https://pauyandres.com/img/web-pau_andres-46.jpg",
       locationName: "Lago del Rey",
       locationAddress:
         "Av Ramón Corona #5243, 45201 Guadalajara, Jalisco",
-      locationUrl: "https://goo.gl/maps/2K9Ruoo8Uq86jkqi8",
+      locationUrl: "https://goo.gl/maps/6euDA6mM2s9PBJZ1A",
       time: "3:30 PM",
     }
   ];
