@@ -52,8 +52,7 @@ export function Gallery() {
         <button className="btn gallery-popup-back" onClick={() => backImage()}>&lt;</button>
         <button className="btn gallery-popup-next" onClick={() => nextImage()}>&gt;</button>
         <div className="gallery-popup-image" alt={title} style={{ backgroundImage: selectedImageIndex !== undefined ? "url(" + galleryImages[selectedImageIndex] + ")" : "" }} />
-    </div>
-      <p className="text-center mb-4"> Pau & Andrés Made by <a type="link" href="https://www.instagram.com/puntodoce.mx/" target="_blank" rel="noreferrer">PuntoDoce.mx</a></p>
+      </div>
     </div>
   );
 }

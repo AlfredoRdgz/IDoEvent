@@ -26,7 +26,7 @@ export function Wishlist() {
   ];
 
   return (
-    <div id="wishlist">
+    <div id="wishlist" className="gray-background">
       <div className="container text-center">
         <h2>MESA DE REGALOS</h2>
         <p>Su presencia es nuestro mejor regalo, si deseas darnos un obsequio les compartimos nuestra mesa de regalos.</p>

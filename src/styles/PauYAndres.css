@@ -3,6 +3,15 @@
   margin: 0 50px;
 }
 
+.punto-12-img {
+  height: 1rem;
+}
+
+.img {
+  width: 50px!important;
+  margin: auto;
+}
+
 @font-face {
   font-family: ENRIQ;
   src: url("./ENRIQ.otf");
@@ -446,7 +455,7 @@ input {
 }
 
 /* WISHLIST */
-#wishlist {
+.gray-background {
   background-color: #F8F6F4;
   padding: 40px 0;
 }
@@ -542,6 +551,41 @@ input {
   .rsvp-input-gray {
     width: 100%;
   }
+}
+
+.recommendations-container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+}
+
+.recommendation-title {
+  color: #bc795e;
+  font-size: 30px;
+}
+
+.recommendation-img {
+  width: 100%;
+  margin: auto;
+}
+
+.recommendation-container {
+  display: table;
+  min-height: 400px;
+  width: 100%;
+}
+
+.recommendation-btn-container {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+}
+
+.recommendation-btn, .recommendation-btn * {
+  background-color: #bc795e !important;
+  color: white;
+  margin: auto;
 }
 
 /*GALLERY*/
