@@ -54,7 +54,7 @@ export function PauAndres() {
     iconUrl: "https://pauyandres.com/img/web-pau_andres-30.png",
     description: "Te dejamos estas recomendaciones de lugares imprescindibles que no te puedes perder a lo largo de tu estadía en Guadalajara.",
     locations: [
-      { name: "San Pedro Tlaquepaque", imageUrl: "https://pauyandres.com/img/web-pau_andres-31.jpg", redirectUrl: "" },
+      { name: "San Pedro Tlaquepaque", imageUrl: "https://pauyandres.com/img/web-pau_andres-31.jpg", redirectUrl: "https://goo.gl/maps/NEKzekQoBxtohHn57" },
       { name: "Tequila Jalisco", imageUrl: "https://pauyandres.com/img/web-pau_andres-32.jpg", redirectUrl: "https://goo.gl/maps/nmjBxzuSFbK4emJR7" },
       { name: "Tapalpa Pueblo Mágico", imageUrl: "https://pauyandres.com/img/web-pau_andres-33.jpg", redirectUrl: "https://goo.gl/maps/xsmaXBiBvvTjwqrT9" },
       { name: "Visitar el Centro de Guadalajara", imageUrl: "https://pauyandres.com/img/web-pau_andres-34.jpg", redirectUrl: "https://goo.gl/maps/uZzSHG85WkotpTWZ7" },
