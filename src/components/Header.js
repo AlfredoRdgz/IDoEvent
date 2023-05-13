@@ -30,6 +30,7 @@ export function Header() {
             <a href="#dressCode">DRESS CODE</a>
             <a href="#wishlist">MESA DE REGALOS</a>
             <a href="#rsvp">RSVP</a>
+            <a href="#recommendations">RECOMENDACIONES</a>
             <a href="#gallery">GALERÍA</a>
           </div>
         </div>
@@ -43,6 +44,7 @@ export function Header() {
             <a href="#dressCode">DRESS CODE</a>
             <a href="#wishlist">MESA DE REGALOS</a>
             <a href="#rsvp">RSVP</a>
+            <a href="#recommendations">RECOMENDACIONES</a>
             <a href="#gallery">GALERÍA</a>
           </div>
         </div>

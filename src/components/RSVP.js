@@ -136,7 +136,7 @@ export function RSVP() {
       <div className="container my-2">
         <p>{inputData.title}</p>
         <div className="text-center" style={{ display: "flex" }}>
-          <div className="row" style={{ margin: "auto" }}>
+          <div className="row" style={{ margin: "auto", justifyContent: "center" }}>
             {inputData.options.map((option) =>
               <div key={option.value} className="p-2">
                 <label htmlFor={option.value + "Option"} className="p-2">{option.value}</label>

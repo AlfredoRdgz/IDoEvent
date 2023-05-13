@@ -35,6 +35,7 @@ export function PauAndres() {
       { name: "Restaurante Alcalde", imageUrl: "https://pauyandres.com/img/web-pau_andres-21.png", redirectUrl: "https://goo.gl/maps/LE1TYWwpDKa2tbQR6" },
       { name: "La Docena", imageUrl: "https://pauyandres.com/img/web-pau_andres-22.png", redirectUrl: "https://goo.gl/maps/gzSvkj7RvSDaEn5a8" },
       { name: "La Tequila", imageUrl: "https://pauyandres.com/img/web-pau_andres-23.png", redirectUrl: "https://goo.gl/maps/VKFqLPqQsrrgB4Nd8" },
+      { name: "Karne Garibaldi", imageUrl: "https://pauyandres.com/img/web-pau_andres-24.png", redirectUrl: "https://goo.gl/maps/Rxsq2uiDE9oATYq58" },
       { name: "Il Duomo", imageUrl: "https://pauyandres.com/img/web-pau_andres-25.png", redirectUrl: "https://goo.gl/maps/Hckg3HPfitqRxkKe6" },
     ]
   },
@@ -45,7 +46,6 @@ export function PauAndres() {
       { name: "Tortas Toño", imageUrl: "https://pauyandres.com/img/web-pau_andres-27.jpg", redirectUrl: "https://goo.gl/maps/mFptT3faRGU1jTfL7" },
       { name: "Los Alteños", imageUrl: "https://pauyandres.com/img/web-pau_andres-28.jpg", redirectUrl: "https://goo.gl/maps/otDxCfT3Pw14kQZRA" },
       { name: "Tacos Omar Carlos", imageUrl: "https://pauyandres.com/img/web-pau_andres-29.jpg", redirectUrl: "https://goo.gl/maps/dgkuunjckGh4FFj8A" },
-      { name: "Karne Garibaldi", imageUrl: "https://pauyandres.com/img/web-pau_andres-24.png", redirectUrl: "https://goo.gl/maps/Rxsq2uiDE9oATYq58" },
     ]
 
   },
@@ -74,7 +74,7 @@ export function PauAndres() {
       <DressCode />
       <Wishlist/>
       <RSVP/>
-      <h2 className="text-center">RECOMENDACIONES</h2>
+      <h2 className="text-center mb-4" id="recommendations">RECOMENDACIONES</h2>
       <Recommendations recommendationsObject={recommendations[0]} containerClassName="gray-background"/>
       <Recommendations recommendationsObject={recommendations[1]}/>
       <Recommendations recommendationsObject={recommendations[2]} containerClassName="gray-background"/>

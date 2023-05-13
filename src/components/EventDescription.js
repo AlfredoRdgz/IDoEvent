@@ -12,12 +12,12 @@ export function EventDescription({ event }) {
   return (
     <div className="event-description">
       <div>
-        <p className="display-mobile">{eventTitle}</p>
+        <p className="event-title">{eventTitle}</p>
         <p>{eventLocationName}</p>
         <p>{eventAddress}</p>
         <b className="cochin">{eventTime}</b>
       </div>
-      <button className="btn">
+      <button className="btn itinerary-btn">
         <a href={mapUrl} rel="noreferrer" target="_blank">VER MAPA</a>
       </button>
     </div>

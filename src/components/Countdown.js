@@ -42,14 +42,14 @@ export function Countdown() {
       <img
         alt="PauYAndrés"
         src="https://pauyandres.com/img/web-pau_andres-04.png"
-        style={{ width: '75px' }}
+        style={{ width: '50px' }}
       />
       <h1>PAULINA & JORGE ANDRÉS</h1>
       <p>28 de octubre de 2023</p>
       <p>Uniremos nuestras vidas en matrimonio</p>
 
       <div className="container w-100" style={{ padding: "0" }}>
-        <div className="row m-0 p-0">
+        <div className="countdown-container">
           <div className="col-6 col-md-3 my-4" style={{ padding: "0px 5px" }}>
             <div className="countdown-time-container">
               <div style={{ margin: "auto" }}>
@@ -84,16 +84,12 @@ export function Countdown() {
           </div>
         </div>
         
-        <div className="row parents-row">
-          <div className="col-sm-6 col-12 p-2">  
-            <div className="parents-container">
-              <p>Roberto Iván Valencia Sevilla<br/>Martha Amelia Jiménez García-Moreno</p>
-            </div>
+        <div className="parents-row">
+          <div className="parents-container">
+            <p>Roberto Iván Valencia Sevilla<br/>Martha Amelia Jiménez García-Moreno</p>
           </div>
-          <div className="col-sm-6 col-12 p-2">
-            <div className="parents-container">
-              <p>Rodolfo Villa Flores<br/>Gabriela Delsordo Cornejo</p>
-            </div>
+          <div className="parents-container">
+            <p>Rodolfo Villa Flores<br/>Gabriela Delsordo Cornejo</p>
           </div>
         </div>
       </div>

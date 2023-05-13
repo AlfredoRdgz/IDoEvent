@@ -3,17 +3,19 @@ import React from "react";
 export function Recommendations({recommendationsObject, containerClassName}) {
 
   const title = recommendationsObject.title;
+  const iconUrl = recommendationsObject.iconUrl;
   const description = recommendationsObject.description;
   const locations = recommendationsObject.locations;
 
   return (
-    <div id={title} className={containerClassName}>
-      <div className="container text-center">
+    <div id={title} className={containerClassName + " recommendation-section"}>
+      <div className="container text-center my-4">
+        <img src={iconUrl} className="icon-img" alt={title}/>
         <h3 className="recommendation-title">{title}</h3>
         { description ? <p>{description}</p> : null }
       </div>
 
-      <div className="row my-4 p-2 recommendations-container">
+      <div className="row mb-4 p-2 recommendations-container">
         {
           locations.map((location, index) => {
             return (

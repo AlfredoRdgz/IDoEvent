@@ -68,7 +68,7 @@ h4,
 h5 {
   font-family: Antic !important;
   color: #9b0200;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 p,
@@ -90,6 +90,11 @@ input {
 
 .cochin {
   font-family: Cochin !important;
+}
+
+.icon-img {
+  width: 50px;
+  margin-bottom: 20px;
 }
 
 #header,
@@ -232,6 +237,14 @@ input {
   color: black;
 }
 
+.countdown-container {
+  max-width: 700px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
 .countdown-time-container {
   text-align: center;
   padding: 10px;
@@ -242,14 +255,24 @@ input {
   height: 150px;
 }
 
+.parents-row {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .parents-container {
-  background-color: #c5a98c;
   width: 100%;
+  max-width: 450px;
   height: 100%;
   display: table;
+  margin: 20px;
 }
 
 .parents-container p {
+  background-color: #c5a98c;
   margin: auto;
   color: white !important;
   display: table-cell;
@@ -258,6 +281,23 @@ input {
 }
 
 @media screen and (max-width: 768px) {
+  
+  h1 {
+    font-size: 50px;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 30px;
+  }
+  
+  .countdown-container {
+    max-width: none;
+    width: 100%;
+  }
+
   .countdown-time-container {
     width: 100%;
     height: auto;
@@ -296,7 +336,7 @@ input {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #c5a98c;
+  background-color: #bc795e;
   top: 5px;
   bottom: 0;
   left: 50%;
@@ -398,8 +438,8 @@ input {
 
 .event-image {
   padding: 10px 40px;
-  width: 50%;
   position: relative;
+  width: 100%;
 }
 
 .event-icon {
@@ -413,14 +453,15 @@ input {
 
 .event-title {
   color: #5B5B5B;
+  font-weight: bold;
 }
 
-.event-image P {
+.event-image p {
   padding: 0 10px;
 }
 
 .event-image img {
-  width: 350px;
+  width: 100%;
 }
 
 .btn,
@@ -439,7 +480,7 @@ input {
 .dress-code-description-container {
   margin: 40px auto;
   padding: 20px;
-  border: 10px solid #9b0200;
+  border: 10px solid #bc795e;
 }
 
 .dress-code-description * {
@@ -447,11 +488,16 @@ input {
 }
 
 .dress-code-description-image {
-  width: 100px;
+  width: 50px;
 }
 
 .dress-code-img-large {
   width: 100%;
+}
+
+.dress-code-icon {
+  width: 50px;
+  margin: 10px;
 }
 
 /* WISHLIST */
@@ -500,7 +546,7 @@ input {
 
 /*RSVP*/
 .rsvp-form-container {
-  border: 10px solid #9b0200;
+  border: 10px solid #bc795e;
   background-color: #F8F6F4;
   max-width: 600px;
   margin: 40px auto;
@@ -542,6 +588,11 @@ input {
   text-align: center;
 }
 
+.itinerary-btn, .itinerary-btn * {
+  background-color: #bc795e!important;
+  color: white;
+}
+
 .rsvp-btn {
   background-color: #bc795e;
   color: white;
@@ -551,6 +602,12 @@ input {
   .rsvp-input-gray {
     width: 100%;
   }
+}
+
+.recommendation-section {
+  padding: 0;
+  display: inline-block;
+  width: 100%;
 }
 
 .recommendations-container {
@@ -566,7 +623,8 @@ input {
 }
 
 .recommendation-img {
-  width: 100%;
+  max-height: 275px;
+  display: table-cell;
   margin: auto;
 }
 

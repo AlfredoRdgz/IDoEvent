@@ -17,7 +17,6 @@ export function ItineraryEvent({ event, isLeft }) {
               className="event-image"
               style={{ display: "flex", flexDirection: "row" }}
             >
-              <p className="event-title">{event.title}</p>
               <img alt={event.title} src={event.image} />
             </div>
           </div>
@@ -30,7 +29,6 @@ export function ItineraryEvent({ event, isLeft }) {
               style={{ display: "flex", flexDirection: "row" }}
             >
               <img alt={event.title} src={event.image} />
-              <p className="event-title">{event.title}</p>
             </div>
           </div>
           <img className="event-icon" alt={event.title} src={event.icon} />

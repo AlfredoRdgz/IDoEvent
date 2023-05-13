@@ -15,7 +15,7 @@ export function DressCode() {
           <div className="dress-code-description-container">
             <img
               alt="Dress code"
-              style={{ width: "75px" }}
+              className="dress-code-icon"
               src="https://pauyandres.com/img/web-pau_andres-07.png"
             />
             <h2>DRESS CODE</h2>
