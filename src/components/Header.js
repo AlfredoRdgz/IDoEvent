@@ -25,13 +25,12 @@ export function Header() {
         </div>
         <div className={showMobileMenu ? "navbar show p-0 m-0" : "navbar-collapse collapse"}>
           <div className="menu row">
-            <a href="#banner">BODA</a>
-            <a href="#itinerary">ITINERARIO</a>
-            <a href="#dressCode">DRESS CODE</a>
-            <a href="#wishlist">MESA DE REGALOS</a>
-            <a href="#rsvp">RSVP</a>
-            <a href="#recommendations">RECOMENDACIONES</a>
-            <a href="#gallery">GALERÍA</a>
+            <a onClick={() => setShowMobileMenu(false)} href="#descriptionSection">BODA</a>
+            <a onClick={() => setShowMobileMenu(false)} href="#itinerarySection">ITINERARIO</a>
+            <a onClick={() => setShowMobileMenu(false)} href="#dressCodeSection">DRESS CODE</a>
+            <a onClick={() => setShowMobileMenu(false)} href="#wishlistSection">MESA DE REGALOS</a>
+            <a onClick={() => setShowMobileMenu(false)} href="#rsvpSection">RSVP</a>
+            <a onClick={() => setShowMobileMenu(false)} href="#recommendationsSection">RECOMENDACIONES</a>
           </div>
         </div>
       </nav>
@@ -39,13 +38,12 @@ export function Header() {
       <nav id="header" className={`${transparent ? "transparent" : ""}`}>
         <div className="row">
           <div className="menu row">
-            <a href="#banner">BODA</a>
-            <a href="#itinerary">ITINERARIO</a>
-            <a href="#dressCode">DRESS CODE</a>
-            <a href="#wishlist">MESA DE REGALOS</a>
-            <a href="#rsvp">RSVP</a>
-            <a href="#recommendations">RECOMENDACIONES</a>
-            <a href="#gallery">GALERÍA</a>
+            <a href="#descriptionSection">BODA</a>
+            <a href="#itinerarySection">ITINERARIO</a>
+            <a href="#dressCodeSection">DRESS CODE</a>
+            <a href="#wishlistSection">MESA DE REGALOS</a>
+            <a href="#rsvpSection">RSVP</a>
+            <a href="#recommendationsSection">RECOMENDACIONES</a>
           </div>
         </div>
       </nav>

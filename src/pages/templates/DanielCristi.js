@@ -8,6 +8,8 @@ import { DressCode } from "../../components/DressCode";
 import { Wishlist } from "../../components/Wishlist";
 import { RSVP } from "../../components/RSVP";
 import { Gallery } from "../../components/Gallery";
+import { ParentsContainers } from "../../components/ParentsContainers";
+import { Description } from "../../components/Description";
 
 export function DanielCristi() {
   const bannerImage =
@@ -21,7 +23,9 @@ export function DanielCristi() {
         <Header />
         <Banner bannerImage={bannerImage} />
       </div>
+      <Description/>
       <Countdown />
+      <ParentsContainers/>
       <div style={{ backgroundImage: backgroundImage1 }} className="intermediate-banner"></div>
       <Itinerary />
       <DressCode />

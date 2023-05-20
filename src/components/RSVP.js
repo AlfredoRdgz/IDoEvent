@@ -1,42 +1,9 @@
 import React, { useState } from "react";
 
-export function RSVP() {
+export function RSVP({rsvpQuestions}) {
 
   const [isRequestPending, setIsRequestPending] = useState(false);
   const [formSent, setFormSent] = useState(false);
-
-  const rsvpQuestions = [
-    {
-      name: "attending",
-      title: "¿Asistirás a nuestra boda? *",
-      type: "yesNoQuestion",
-      value: "Si"
-    },
-    {
-      name: "name",
-      placeholder: "Nombre *",
-      type: "text"
-    },
-    {
-      name: "phone",
-      placeholder: "Teléfono *",
-      type: "text"
-    },
-    {
-      name: "guestCount",
-      title: "¿Cuántos invitados asistirán en total a la boda? *",
-      type: "selectCount",
-      placeholder: "Únicamente el número de invitados señalados en el boleto",
-      min: 0,
-      max: 6
-    },
-    {
-      name: "drinks",
-      title: "¿Qué les gustaría tomar?",
-      type: "option",
-      options: [{ value: "Tequila", isChecked: false }, { value: "Ron", isChecked: false }, { value: "Vodka", isChecked: false }, { value: "Whiskey", isChecked: false }, { value: "Gin", isChecked: false }]
-    }
-  ];
 
   function createYesNoQuestion(inputData) {
 

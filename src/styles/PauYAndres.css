@@ -79,6 +79,16 @@ input {
   font-family: Montserrat !important;
 }
 
+.container {
+  position: relative;
+}
+
+.anchor {
+  position: absolute;
+  top: -65px; /* given the fixed header is 50px tall, and you want 15px padding */
+  left: 0px;
+}
+
 .cursive {
   font-family: MonoAndFriendsLa !important;
   color: #5B5B5B;
@@ -119,12 +129,6 @@ input {
 #header *,
 #headerMobile * {
   color: #5B5B5B;
-}
-
-#header.transparent,
-#header.transparent * {
-  color: white;
-  background-color: transparent;
 }
 
 .menu-btn {
@@ -176,6 +180,10 @@ input {
 @media screen and (min-width: 1025px) {
   #headerMobile {
     display: none;
+  }
+
+  #description {
+    margin-top: 65px;
   }
 }
 
@@ -508,20 +516,20 @@ input {
 
 .wishlist-item {
   background-color: white;
-  padding: 20px;
   height: 100%;
   min-height: 300px;
-  margin: auto;
-  display: table;
+  position: relative;
+  width: 100%;
+}
+
+.wishlist-btn-container {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
 }
 
 .wishlist-btn {
-  position: absolute;
-  bottom: 5px;
-}
-
-.wishlist-item div {
-  text-align: left;
+  text-align: center;
 }
 
 .wishlist-item img {
