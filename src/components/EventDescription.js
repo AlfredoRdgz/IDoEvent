@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../app/context";
 
 export function EventDescription({ event }) {
+  const GlobalStrings = useContext(GlobalContext);
   const eventTitle = event.title;
   const eventLocationName = event.locationName;
   const eventAddress = event.locationAddress;
@@ -18,7 +20,7 @@ export function EventDescription({ event }) {
         <b className="cochin">{eventTime}</b>
       </div>
       <button className="btn itinerary-btn">
-        <a href={mapUrl} rel="noreferrer" target="_blank">VER MAPA</a>
+        <a href={mapUrl} rel="noreferrer" target="_blank">{GlobalStrings.MapButtonLabel}</a>
       </button>
     </div>
   );

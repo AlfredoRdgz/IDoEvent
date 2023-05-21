@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../app/context";
 import { ItineraryEvent } from "./ItineraryEvent";
 
 export function Itinerary() {
+  const GlobalStrings = useContext(GlobalContext);
   const events = [
     {
       title: "Ceremonia",
@@ -29,7 +31,7 @@ export function Itinerary() {
 
   return (
     <div id="itinerary" className="text-center">
-      <h2> ITINERARIO</h2>
+      <h2>{GlobalStrings.ItineraryTitle}</h2>
       <div className="timeline">
         {events.map((event, index) => {
           return (

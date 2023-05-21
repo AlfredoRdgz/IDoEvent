@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import "../../styles/PauYAndres.css";
 import { Header } from "../../components/Header";
 import { Countdown } from "../../components/Countdown";
@@ -9,26 +9,41 @@ import { RSVP } from "../../components/RSVP";
 import { Recommendations } from "../../components/Recommendations";
 import { Description } from "../../components/Description";
 import { Anchor } from "../../components/Anchor";
+import { GlobalContext } from "../../app/context";
 
 export function PauAndres() {
+  const GlobalStrings = useContext(GlobalContext);
+
+  const navigationLinks = [
+    { label: "BODA", href: "#descriptionSection" },
+    { label: "ITINERARIO", href: "#itinerarySection" },
+    { label: "DRESS CODE", href: "#dressCodeSection" },
+    { label: "MESA DE REGALOS", href: "#wishlistSection" },
+    { label: "RSVP", href: "#rsvpSection" },
+    { label: "RECOMENDACIONES", href: "#recommendationsSection" }
+  ];
+
   const title = "PAULINA & JORGE ANDRÉS";
   const date = "28 de Octubre de 2023";
   const description = "Uniremos nuestras vidas en matrimonio y queremos compartir con nuestros seres más queridos y con la bendición de Dios y de nuestros padres Roberto Iván Valencia Sevilla, Martha Amelia Jiménez García-Moreno, Rodolfo Villa Flores y Gabriela Delsordo Cornejo.";
   const wishlistDescription = "El mejor regalo que nos pueden dar es su presencia pero si quieren obsequiarnos algo, pueden hacerlo de dos maneras:";
+
+  const dressCodeDescription = "RIGUROSO FORMAL";
+  const dressCodeWomen = "Vestido midi o cocktail";
+  const dressCodeMen = "Traje y corbata";
+  const childrenAllowed = true;
 
   const wishlistArray = [
     {
       image: "https://pauyandres.com/img/web-pau_andres-67.png",
       title: "Paulina Valencia y Andrés Villa",
       description: "Échale un ojo a nuestra mesa de regalos",
-      url: "https://mesaderegalos.liverpool.com.mx/milistaderegalos/50481006",
+      url: "https://evento.uniko.co/pauvalencia_andresvilla/",
     },
     {
       image: "https://pauyandres.com/img/web-pau_andres-68.png",
       title: "Paulina Valencia Jiménes",
-      description:
-        "Cuenta CLABE:710969000000004835",
-      url: "https://www.amazon.com.mx/wedding/share/danielycristi",
+      description: "Cuenta CLABE:710969000000004835"
     },
   ];
 
@@ -117,19 +132,19 @@ export function PauAndres() {
 
   return (
     <div id="template">
-      <Header />
+      <Header links={navigationLinks} />
       <Anchor name="descriptionSection"/>
       <Description title={title} date={date} description={description}/>
       <Countdown />
       <Anchor name="itinerarySection"/>
       <Itinerary />
       <Anchor name="dressCodeSection"/>
-      <DressCode />
+      <DressCode dressCodeDescription={dressCodeDescription} dressCodeMen={dressCodeMen} dressCodeWomen={dressCodeWomen} childrenAllowed={childrenAllowed}/>
       <Anchor name="wishlistSection"/>
       <Wishlist description={wishlistDescription} wishlistArray={wishlistArray}/>
       <Anchor name="rsvpSection"/>
       <RSVP rsvpQuestions={rsvpQuestions}/>
-      <h2 className="text-center mb-4" id="recommendations">RECOMENDACIONES</h2>
+      <h2 className="text-center mb-4" id="recommendations">{GlobalStrings.RecommendationsTitle}</h2>
       <Anchor name="recommendationsSection"/>
       <Recommendations recommendationsObject={recommendations[0]} containerClassName="gray-background"/>
       <Recommendations recommendationsObject={recommendations[1]}/>
@@ -139,7 +154,7 @@ export function PauAndres() {
         <img className="img" src="https://pauyandres.com/img/web-pau_andres-40.png" aria-label="Pau y Andrés"/>
       </div>
       <div className="row w-100 my-4 text-center">
-        <p style={{ margin: "auto" }}> Pau & Andrés Made by <a type="link" href="https://www.instagram.com/puntodoce.mx/" target="_blank" rel="noreferrer"><img className="punto-12-img" src="https://pauyandres.com/img/web-pau_andres-41.png" alt="PuntoDoce.mx" aria-label="PuntoDoce.mx"/></a></p>
+        <p style={{ margin: "auto" }}> {GlobalStrings.MadeByLabel} <a type="link" href="https://www.instagram.com/puntodoce.mx/" target="_blank" rel="noreferrer"><img className="punto-12-img" src="https://pauyandres.com/img/web-pau_andres-41.png" alt={GlobalStrings.PuntoDoceLabel} aria-label={GlobalStrings.PuntoDoceLabel}/></a></p>
       </div>
     </div>
   );

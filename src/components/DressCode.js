@@ -1,10 +1,9 @@
 import React from "react";
+import { GlobalContext } from "../app/context";
+import { useContext } from "react";
 
-export function DressCode() {
-  const dressCodeDescription = "RIGUROSO FORMAL";
-  const dressCodeWomen = "Vestido midi o cocktail";
-  const dressCodeMen = "Traje y corbata";
-  const childrenAllowed = true;
+export function DressCode({dressCodeDescription, dressCodeWomen, dressCodeMen, childrenAllowed}) {
+  const GlobalStrings = useContext(GlobalContext);
 
   return (
     <div id="dressCode" className="container">
@@ -18,13 +17,13 @@ export function DressCode() {
               className="dress-code-icon"
               src="https://pauyandres.com/img/web-pau_andres-07.png"
             />
-            <h2>DRESS CODE</h2>
+            <h2>{GlobalStrings.DressCodeTitle}</h2>
             <p>{dressCodeDescription}</p>
-            <b className="cochin">MUJERES:</b>
+            <b className="cochin">{GlobalStrings.WomenLabel}</b>
             <p>{dressCodeWomen}</p>
-            <b className="cochin">HOMBRES:</b>
+            <b className="cochin">{GlobalStrings.MenLabel}</b>
             <p>{dressCodeMen}</p>
-            {childrenAllowed ? "" : <b className="cochin">NO NIÑOS</b>}
+            {childrenAllowed ? "" : <b className="cochin">{GlobalStrings.NoKidsLabel}</b>}
           </div>
         </div>
       </div>

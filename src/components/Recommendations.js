@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../app/context";
 
 export function Recommendations({recommendationsObject, containerClassName}) {
+  const GlobalStrings = useContext(GlobalContext);
 
   const title = recommendationsObject.title;
   const iconUrl = recommendationsObject.iconUrl;
@@ -19,7 +21,7 @@ export function Recommendations({recommendationsObject, containerClassName}) {
         {
           locations.map((location, index) => {
             return (
-              <div className="col-12 col-sm-4 col-lg-2">
+              <div className="col-12 col-sm-4 col-lg-2" key={title + index}>
                 <div className="recommendation-container">
                     <img className="my-2 recommendation-img" src={location.imageUrl} aria-label={location.name} />
                     <p className="my-2 text-center">{location.name}</p>
@@ -27,7 +29,7 @@ export function Recommendations({recommendationsObject, containerClassName}) {
                     <div className="row w-100">
 
                     <button className="recommendation-btn btn my-2">
-                      <a href={location.redirectUrl} rel="noreferrer" target="_blank">VER MAPA</a>
+                      <a href={location.redirectUrl} rel="noreferrer" target="_blank">{GlobalStrings.MapButtonLabel}</a>
                     </button>
                     </div>
                     </div>

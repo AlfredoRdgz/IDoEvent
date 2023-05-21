@@ -1,37 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { GlobalContext } from "../app/context";
 
 export function RSVP({rsvpQuestions}) {
-
+  const GlobalStrings = useContext(GlobalContext);
   const [isRequestPending, setIsRequestPending] = useState(false);
   const [formSent, setFormSent] = useState(false);
 
   function createYesNoQuestion(inputData) {
 
-    var yesInputId = inputData.title + "Yes";
-    var noInputId = inputData.title + "No";
+    var yesInputId = inputData.title + GlobalStrings.YesLabel;
+    var noInputId = inputData.title + GlobalStrings.NoLabel;
 
     return (
-      <div className="container w-100 my-2">
+      <div className="container w-100 my-2" key={"yesno" + inputData.title}>
         <p>{inputData.title}</p>
         <div className="text-center" style={{ display: "flex" }}>
           <div className="rsvp-input-container" style={{ margin: "auto" }}>
-            <label htmlFor={yesInputId}>Si</label>
+            <label htmlFor={yesInputId}>{ GlobalStrings.YesLabel }</label>
             <input
               id={yesInputId}
               type="radio"
               name={inputData.name}
-              value={inputData.value === "Si"}
+              value={inputData.value === GlobalStrings.YesLabel }
               required
-              onClick={() => inputData.value = "Si"}
+              onClick={() => inputData.value = GlobalStrings.YesLabel }
             />
-            <label htmlFor={noInputId}>No</label>
+            <label htmlFor={noInputId}>{ GlobalStrings.NoLabel }</label>
             <input
               id={noInputId}
               type="radio"
               name={inputData.name}
-              value={inputData.value === "No"}
+              value={inputData.value === GlobalStrings.NoLabel}
               required
-              onClick={() => inputData.value = "No"}
+              onClick={() => inputData.value = GlobalStrings.NoLabel}
             />
           </div>
         </div>
@@ -41,7 +42,7 @@ export function RSVP({rsvpQuestions}) {
 
   function createShortInput(inputData) {
     return (
-      <div className="container w-50 my-2">
+      <div className="container w-50 my-2" key={"input" + inputData.name}>
         <input
           name={inputData.name}
           type={inputData.type}
@@ -57,7 +58,7 @@ export function RSVP({rsvpQuestions}) {
 
   function createTextArea(inputData) {
     return (
-      <div className="container w-100 my-2">
+      <div className="container w-100 my-2" key={"textarea" + inputData.title}>
         <p>{inputData.title}</p>
         <textarea
           name={inputData.name}
@@ -82,7 +83,7 @@ export function RSVP({rsvpQuestions}) {
     }
 
     return (
-      <div className="container w-100 my-2">
+      <div className="container w-100 my-2" key={"select" + inputData.title}>
         <p>{inputData.title}</p>
         <select
           name={inputData.name}
@@ -90,9 +91,10 @@ export function RSVP({rsvpQuestions}) {
           placeholder={inputData.placeholder}
           required
           onChange={(event) => inputData.value = event.target.value}
-          value={inputData.value}>
-          <option value="" selected disabled>{inputData.placeholder}</option>
-          {range.map((number) => <option value={number} key={number}>{number}</option>)}
+          value={inputData.value}
+          defaultValue="">
+          <option value="" disabled>{inputData.placeholder}</option>
+          {range.map((number) => <option value={number} key={inputData.name + number}>{number}</option>)}
         </select>
       </div>
     );
@@ -100,7 +102,7 @@ export function RSVP({rsvpQuestions}) {
 
   function createOptionList(inputData) {
     return (
-      <div className="container my-2">
+      <div className="container my-2" key={"options" + inputData.title}>
         <p>{inputData.title}</p>
         <div className="text-center" style={{ display: "flex" }}>
           <div className="row" style={{ margin: "auto", justifyContent: "center" }}>
@@ -163,9 +165,9 @@ export function RSVP({rsvpQuestions}) {
   return (
     <div id="rsvp" className="container">
       <div className={formSent ? "rsvp-form-container text-center hidden" : "rsvp-form-container text-center"}>
-        <h2>CONFIRMA TU ASISTENCIA</h2>
+        <h2>{GlobalStrings.RsvpTitle}</h2>
         <p style={{ margin: "20px", fontSize: "12px" }}>
-          ¡Queremos compartir este momento tan esperado contigo! <br /> Por favor ayúdanos confirmando tu asistencia y se parte de nuestro gran día
+          {GlobalStrings.RsvpSubtitle}<br/>{GlobalStrings.RsvpDescription}
         </p>
 
         <form style={{ display: "flex", flexDirection: "column" }} onSubmit={sendForm}>
@@ -191,15 +193,15 @@ export function RSVP({rsvpQuestions}) {
               })
             }
           </div>
-          <button className="btn rsvp-btn" disabled={isRequestPending}>Enviar confirmación</button>
+          <button className="btn rsvp-btn" disabled={isRequestPending}>{GlobalStrings.RsvpButtonLabel}</button>
         </form>
       </div>
 
 
       <div className={formSent ? "rsvp-form-container text-center" : "rsvp-form-container text-center hidden"}>
-        <h2>HEMOS CONFIRMADO TU ASISTENCIA</h2>
+        <h2>{GlobalStrings.RsvpConfirmationTitle}</h2>
         <p style={{ margin: "20px", fontSize: "12px" }}>
-          Gracias por llenar el formulario. Hemos recibido el correo de confirmación de manera exitosa y se ha concluido con tu registro para la boda. ¡Te esperamos!
+          {GlobalStrings.RsvpConfirmationDescription}
         </p>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export function Header() {
+export function Header({links = []}) {
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [transparent, setTransparent] = useState(true);
@@ -25,12 +25,9 @@ export function Header() {
         </div>
         <div className={showMobileMenu ? "navbar show p-0 m-0" : "navbar-collapse collapse"}>
           <div className="menu row">
-            <a onClick={() => setShowMobileMenu(false)} href="#descriptionSection">BODA</a>
-            <a onClick={() => setShowMobileMenu(false)} href="#itinerarySection">ITINERARIO</a>
-            <a onClick={() => setShowMobileMenu(false)} href="#dressCodeSection">DRESS CODE</a>
-            <a onClick={() => setShowMobileMenu(false)} href="#wishlistSection">MESA DE REGALOS</a>
-            <a onClick={() => setShowMobileMenu(false)} href="#rsvpSection">RSVP</a>
-            <a onClick={() => setShowMobileMenu(false)} href="#recommendationsSection">RECOMENDACIONES</a>
+            {links.map((link, index) => {
+              return <a key={"mobileHeader" + index} onClick={() => setShowMobileMenu(false)} href={link.href}>{link.label}</a>
+            })}
           </div>
         </div>
       </nav>
@@ -38,12 +35,9 @@ export function Header() {
       <nav id="header" className={`${transparent ? "transparent" : ""}`}>
         <div className="row">
           <div className="menu row">
-            <a href="#descriptionSection">BODA</a>
-            <a href="#itinerarySection">ITINERARIO</a>
-            <a href="#dressCodeSection">DRESS CODE</a>
-            <a href="#wishlistSection">MESA DE REGALOS</a>
-            <a href="#rsvpSection">RSVP</a>
-            <a href="#recommendationsSection">RECOMENDACIONES</a>
+            {links.map((link, index) => {
+              return <a key={"header" + index} href={link.href}>{link.label}</a>
+            })}
           </div>
         </div>
       </nav>

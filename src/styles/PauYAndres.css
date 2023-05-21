@@ -632,6 +632,7 @@ input {
 
 .recommendation-img {
   max-height: 275px;
+  max-width: 208px;
   display: table-cell;
   margin: auto;
 }
