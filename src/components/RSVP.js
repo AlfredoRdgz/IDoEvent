@@ -148,7 +148,7 @@ export function RSVP({rsvpQuestions}) {
     }
 
     try {
-      const response = await fetch(`https://i-do-backend.herokuapp.com/rsvp/confirmation`, requestContract);
+      const response = await fetch(`https://i-do-backend.onrender.com/rsvp/confirmation`, requestContract);
 
       if (response.status === 200) {
         setFormSent(true);
