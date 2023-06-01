@@ -264,7 +264,6 @@ input {
 }
 
 .parents-row {
-  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -280,12 +279,10 @@ input {
 }
 
 .parents-container p {
-  background-color: #c5a98c;
   margin: auto;
-  color: white !important;
   display: table-cell;
-  padding: 20px;
   vertical-align: middle;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

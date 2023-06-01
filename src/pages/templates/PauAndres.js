@@ -10,6 +10,7 @@ import { Recommendations } from "../../components/Recommendations";
 import { Description } from "../../components/Description";
 import { Anchor } from "../../components/Anchor";
 import { GlobalContext } from "../../app/context";
+import { ParentsContainers } from "../../components/ParentsContainers";
 
 export function PauAndres() {
   const GlobalStrings = useContext(GlobalContext);
@@ -25,13 +26,17 @@ export function PauAndres() {
 
   const title = "PAULINA & JORGE ANDRÉS";
   const date = "28 de Octubre de 2023";
-  const description = "Uniremos nuestras vidas en matrimonio y queremos compartir con nuestros seres más queridos y con la bendición de Dios y de nuestros padres Roberto Iván Valencia Sevilla, Martha Amelia Jiménez García-Moreno, Rodolfo Villa Flores y Gabriela Delsordo Cornejo.";
+  const description = "Uniremos nuestras vidas en matrimonio y queremos compartir con nuestros seres más queridos y con la bendición de Dios y de nuestros padres:";
+  const wed1Name1 = "Roberto Iván Valencia Sevilla";
+  const wed1Name2 = "Martha Amelia Jiménez García-Moreno";
+  const wed2Name1 = "Rodolfo Villa Flores";
+  const wed2Name2 = "Gabriela Delsordo Cornejo";
   const wishlistDescription = "El mejor regalo que nos pueden dar es su presencia pero si quieren obsequiarnos algo, pueden hacerlo de dos maneras:";
 
   const dressCodeDescription = "RIGUROSO FORMAL";
   const dressCodeWomen = "Vestido midi o cocktail";
   const dressCodeMen = "Traje y corbata";
-  const childrenAllowed = true;
+  const childrenAllowed = false;
 
   const wishlistArray = [
     {
@@ -42,7 +47,7 @@ export function PauAndres() {
     },
     {
       image: "https://pauyandres.com/img/web-pau_andres-68.png",
-      title: "Paulina Valencia Jiménes",
+      title: "Paulina Valencia Jiménez",
       description: "Cuenta CLABE:710969000000004835"
     },
   ];
@@ -135,6 +140,7 @@ export function PauAndres() {
       <Header links={navigationLinks} />
       <Anchor name="descriptionSection"/>
       <Description title={title} date={date} description={description}/>
+      <ParentsContainers wed1Name1={wed1Name1} wed1Name2={wed1Name2} wed2Name1={wed2Name1} wed2Name2={wed2Name2}/>
       <Countdown />
       <Anchor name="itinerarySection"/>
       <Itinerary />
