@@ -286,11 +286,11 @@ export const EnglishProps = {
         iconUrl: "https://pauyandres.com/img/web-pau_andres-30.png",
         locations: [
         { name: "San Pedro Tlaquepaque", imageUrl: "https://pauyandres.com/img/web-pau_andres-31.jpg", redirectUrl: "https://goo.gl/maps/NEKzekQoBxtohHn57" },
-        { name: "Tequila Jalisco", imageUrl: "https://pauyandres.com/img/web-pau_andres-32.jpg", redirectUrl: "https://goo.gl/maps/nmjBxzuSFbK4emJR7" },
-        { name: "Tapalpa Pueblo Mágico", imageUrl: "https://pauyandres.com/img/web-pau_andres-33.jpg", redirectUrl: "https://goo.gl/maps/xsmaXBiBvvTjwqrT9" },
-        { name: "Visitar el Centro de Guadalajara", imageUrl: "https://pauyandres.com/img/web-pau_andres-34.jpg", redirectUrl: "https://goo.gl/maps/uZzSHG85WkotpTWZ7" },
-        { name: "Lago de Chapala", imageUrl: "https://pauyandres.com/img/web-pau_andres-35.jpg", redirectUrl: "https://goo.gl/maps/79yFuJnFTF3FL5KUA" },
-        { name: "Calaverandia parque temático día de muertos", imageUrl: "https://pauyandres.com/img/web-pau_andres-36.jpg", redirectUrl: "https://goo.gl/maps/tpTU6HJ8nNY9YpZi6" }
+        { name: "Tequila Town", imageUrl: "https://pauyandres.com/img/web-pau_andres-32.jpg", redirectUrl: "https://goo.gl/maps/nmjBxzuSFbK4emJR7" },
+        { name: "Tapalpa Town", imageUrl: "https://pauyandres.com/img/web-pau_andres-33.jpg", redirectUrl: "https://goo.gl/maps/xsmaXBiBvvTjwqrT9" },
+        { name: "Guadalajara Downtown", imageUrl: "https://pauyandres.com/img/web-pau_andres-34.jpg", redirectUrl: "https://goo.gl/maps/uZzSHG85WkotpTWZ7" },
+        { name: "Chapala Lake", imageUrl: "https://pauyandres.com/img/web-pau_andres-35.jpg", redirectUrl: "https://goo.gl/maps/79yFuJnFTF3FL5KUA" },
+        { name: "Calaverandia Theme Park - Día de muertos", imageUrl: "https://pauyandres.com/img/web-pau_andres-36.jpg", redirectUrl: "https://goo.gl/maps/tpTU6HJ8nNY9YpZi6" }
         ]
     }]
 };
