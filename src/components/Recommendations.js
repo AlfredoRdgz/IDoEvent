@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../app/context";
 
 export function Recommendations({recommendationsObject, containerClassName}) {
-  const GlobalStrings = useContext(GlobalContext);
+  const { LocalizedStrings } = useContext(GlobalContext);
 
   const title = recommendationsObject.title;
   const iconUrl = recommendationsObject.iconUrl;
@@ -29,7 +29,7 @@ export function Recommendations({recommendationsObject, containerClassName}) {
                     <div className="row w-100">
 
                     <button className="recommendation-btn btn my-2">
-                      <a href={location.redirectUrl} rel="noreferrer" target="_blank">{GlobalStrings.MapButtonLabel}</a>
+                      <a href={location.redirectUrl} rel="noreferrer" target="_blank">{LocalizedStrings.MapButtonLabel}</a>
                     </button>
                     </div>
                     </div>

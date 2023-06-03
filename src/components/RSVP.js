@@ -1,38 +1,39 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../app/context";
 
-export function RSVP({rsvpQuestions}) {
-  const GlobalStrings = useContext(GlobalContext);
+export function RSVP() {
+  const { LocalizedStrings, MasterProps } = useContext(GlobalContext);
+  const {rsvpQuestions} = MasterProps;
   const [isRequestPending, setIsRequestPending] = useState(false);
   const [formSent, setFormSent] = useState(false);
 
   function createYesNoQuestion(inputData) {
 
-    var yesInputId = inputData.title + GlobalStrings.YesLabel;
-    var noInputId = inputData.title + GlobalStrings.NoLabel;
+    var yesInputId = inputData.title + LocalizedStrings.YesLabel;
+    var noInputId = inputData.title + LocalizedStrings.NoLabel;
 
     return (
       <div className="container w-100 my-2" key={"yesno" + inputData.title}>
         <p>{inputData.title}</p>
         <div className="text-center" style={{ display: "flex" }}>
           <div className="rsvp-input-container" style={{ margin: "auto" }}>
-            <label htmlFor={yesInputId}>{ GlobalStrings.YesLabel }</label>
+            <label htmlFor={yesInputId}>{ LocalizedStrings.YesLabel }</label>
             <input
               id={yesInputId}
               type="radio"
               name={inputData.name}
-              value={inputData.value === GlobalStrings.YesLabel }
+              value={inputData.value === LocalizedStrings.YesLabel }
               required
-              onClick={() => inputData.value = GlobalStrings.YesLabel }
+              onClick={() => inputData.value = LocalizedStrings.YesLabel }
             />
-            <label htmlFor={noInputId}>{ GlobalStrings.NoLabel }</label>
+            <label htmlFor={noInputId}>{ LocalizedStrings.NoLabel }</label>
             <input
               id={noInputId}
               type="radio"
               name={inputData.name}
-              value={inputData.value === GlobalStrings.NoLabel}
+              value={inputData.value === LocalizedStrings.NoLabel}
               required
-              onClick={() => inputData.value = GlobalStrings.NoLabel}
+              onClick={() => inputData.value = LocalizedStrings.NoLabel}
             />
           </div>
         </div>
@@ -165,9 +166,9 @@ export function RSVP({rsvpQuestions}) {
   return (
     <div id="rsvp" className="container">
       <div className={formSent ? "rsvp-form-container text-center hidden" : "rsvp-form-container text-center"}>
-        <h2>{GlobalStrings.RsvpTitle}</h2>
+        <h2>{LocalizedStrings.RsvpTitle}</h2>
         <p style={{ margin: "20px", fontSize: "12px" }}>
-          {GlobalStrings.RsvpSubtitle}<br/>{GlobalStrings.RsvpDescription}
+          {LocalizedStrings.RsvpSubtitle}<br/>{LocalizedStrings.RsvpDescription}
         </p>
 
         <form style={{ display: "flex", flexDirection: "column" }} onSubmit={sendForm}>
@@ -193,15 +194,15 @@ export function RSVP({rsvpQuestions}) {
               })
             }
           </div>
-          <button className="btn rsvp-btn" disabled={isRequestPending}>{GlobalStrings.RsvpButtonLabel}</button>
+          <button className="btn rsvp-btn" disabled={isRequestPending}>{LocalizedStrings.RsvpButtonLabel}</button>
         </form>
       </div>
 
 
       <div className={formSent ? "rsvp-form-container text-center" : "rsvp-form-container text-center hidden"}>
-        <h2>{GlobalStrings.RsvpConfirmationTitle}</h2>
+        <h2>{LocalizedStrings.RsvpConfirmationTitle}</h2>
         <p style={{ margin: "20px", fontSize: "12px" }}>
-          {GlobalStrings.RsvpConfirmationDescription}
+          {LocalizedStrings.RsvpConfirmationDescription}
         </p>
       </div>
     </div>

@@ -2,14 +2,15 @@ import React from "react";
 import { useContext } from "react";
 import { GlobalContext } from "../app/context";
 
-export function Wishlist({description, wishlistArray}) {
-  const GlobalStrings = useContext(GlobalContext);
+export function Wishlist() {
+  const { LocalizedStrings, MasterProps } = useContext(GlobalContext);
+  const { wishlistDescription, wishlistArray } = MasterProps;
 
   return (
     <div id="wishlist" className="gray-background">
       <div className="container text-center">
-        <h2 className="mb-4">{GlobalStrings.WishlistTitle}</h2>
-        <p>{description}</p>
+        <h2 className="mb-4">{LocalizedStrings.WishlistTitle}</h2>
+        <p>{wishlistDescription}</p>
         <img
           alt="Dress code"
           style={{ width: "50px", marginBottom: "20px" }}
@@ -36,7 +37,7 @@ export function Wishlist({description, wishlistArray}) {
                   wishlist.url ?
                   <div className="wishlist-btn-container">
                     <button className="wishlist-btn btn">
-                      <a href={wishlist.url} rel="noreferrer" target="_blank">{GlobalStrings.WishlistButtonLabel}</a>
+                      <a href={wishlist.url} rel="noreferrer" target="_blank">{LocalizedStrings.WishlistButtonLabel}</a>
                     </button>
                   </div> : null
                   }

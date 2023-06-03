@@ -1,21 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter } from "react-router-dom";
-import { GlobalContext } from "./app/context";
-import SpanishStrings from "./strings/strings_es.json";
-
-const GlobalStrings = SpanishStrings;
+import { MasterPage } from "./pages/MasterPage";
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalContext.Provider value={GlobalStrings}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </GlobalContext.Provider>
+    <MasterPage/>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useContext } from "react";
+import { GlobalContext } from "../app/context";
 
-export function Header({links = []}) {
+export function Header() {
+  const { MasterProps } = useContext(GlobalContext);
+  const { navigationLinks } = MasterProps;
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [transparent, setTransparent] = useState(true);
@@ -25,7 +29,7 @@ export function Header({links = []}) {
         </div>
         <div className={showMobileMenu ? "navbar show p-0 m-0" : "navbar-collapse collapse"}>
           <div className="menu row">
-            {links.map((link, index) => {
+            {navigationLinks.map((link, index) => {
               return <a key={"mobileHeader" + index} onClick={() => setShowMobileMenu(false)} href={link.href}>{link.label}</a>
             })}
           </div>
@@ -35,7 +39,7 @@ export function Header({links = []}) {
       <nav id="header" className={`${transparent ? "transparent" : ""}`}>
         <div className="row">
           <div className="menu row">
-            {links.map((link, index) => {
+            {navigationLinks.map((link, index) => {
               return <a key={"header" + index} href={link.href}>{link.label}</a>
             })}
           </div>

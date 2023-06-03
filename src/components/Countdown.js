@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../app/context";
 
 export function Countdown() {
-  const GlobalStrings = useContext(GlobalContext);
+  const { LocalizedStrings } = useContext(GlobalContext);
   const date = new Date('2023-10-28T00:00:00').getTime();
 
   // Get today's date and time
@@ -47,7 +47,7 @@ export function Countdown() {
             <div className="countdown-time-container">
               <div style={{ margin: "auto" }}>
                 <h2 className="time">{days}</h2>
-                <p className="time-description">{GlobalStrings.DaysLabel}</p>
+                <p className="time-description">{LocalizedStrings.DaysLabel}</p>
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@ export function Countdown() {
             <div className="countdown-time-container">
               <div style={{ margin: "auto" }}>
                 <h2 className="time">{hours}</h2>
-                <p className="time-description">{GlobalStrings.HoursLabel}</p>
+                <p className="time-description">{LocalizedStrings.HoursLabel}</p>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ export function Countdown() {
             <div className="countdown-time-container">
               <div style={{ margin: "auto" }}>
                 <h2 className="time">{minutes}</h2>
-                <p className="time-description">{GlobalStrings.MinutesLabel}</p>
+                <p className="time-description">{LocalizedStrings.MinutesLabel}</p>
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@ export function Countdown() {
             <div className="countdown-time-container">
               <div style={{ margin: "auto" }}>
                 <h2 className="time">{seconds}</h2>
-                <p className="time-description">{GlobalStrings.SecondsLabel}</p>
+                <p className="time-description">{LocalizedStrings.SecondsLabel}</p>
               </div>
             </div>
           </div>
